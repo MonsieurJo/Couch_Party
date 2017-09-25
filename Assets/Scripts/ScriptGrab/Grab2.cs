@@ -2,7 +2,7 @@
 using System.Collections.Generic ;
 using UnityEngine ;
 
-public class Grab : MonoBehaviour 
+public class Grab2 : MonoBehaviour 
 {
 	public Transform player ;
 	public Transform playerCam ;
