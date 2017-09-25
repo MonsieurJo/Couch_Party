@@ -8,12 +8,12 @@ public class PlayerController : MonoBehaviour {
 
 	public float turnSpeed = 50;
 
-	private Rigidbody rig;
+	private Rigidbody player;
 
 
 	// Use this for initialization
 	void Start () {
-		rig = GetComponent<Rigidbody>();
+		player = GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
@@ -24,20 +24,24 @@ public class PlayerController : MonoBehaviour {
 		float leftTrigger = Input.GetAxis("J1LeftTrigger");
 		float rightTrigger = Input.GetAxis("J1RightTrigger");
 
+		bool aJ1 = Input.GetButtonDown("J1A");
+		bool bJ1 = Input.GetButtonDown("J1B");
+		bool startJ1 = Input.GetButtonDown("J1Start");
+
 		Vector3 movement = transform.TransformDirection(new Vector3(hAxis, 0f, vAxis) * speed * Time.deltaTime);
 
-		rig.MovePosition(transform.position + movement);
+		player.MovePosition(transform.position + movement);
 
-		if (Input.GetButtonDown("J1A")){
+		if (aJ1){
 			Debug.Log("A");
 		}
-		if(Input.GetButtonDown("J1B")){
+		if(bJ1){
 			Debug.Log("B");
 		}
-		if(Input.GetButtonDown("J1Start")){
+		if(startJ1){
 			Debug.Log("Start");
 		}
-		if(hAxis < 0f){
+		if(hAxis != 0f){
 			Debug.Log("Horizontal:" + hAxis.ToString());
 		}
 		if(rightTrigger != 0f){
@@ -45,6 +49,9 @@ public class PlayerController : MonoBehaviour {
 		}
 		if(leftTrigger != 0f){
 			Debug.Log("Left Trigger value:" + leftTrigger.ToString());
+		}
+		if (vAxis != 0f){
+			Debug.Log("Vertical :" + vAxis.ToString());
 		}
 	}
 }
