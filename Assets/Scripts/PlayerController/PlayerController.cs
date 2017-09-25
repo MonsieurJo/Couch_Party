@@ -18,22 +18,21 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		float hAxis = Input.GetAxisRaw("J1Horizontal");
-		float vAxis = Input.GetAxisRaw("J1Vertical");
+		float hAxisJ1 = Input.GetAxisRaw("J1Horizontal");
+		float vAxisJ1 = Input.GetAxisRaw("J1Vertical");
 
-		float leftTrigger = Input.GetAxis("J1LeftTrigger");
-		float rightTrigger = Input.GetAxis("J1RightTrigger");
+		float leftTriggerJ1 = Input.GetAxis("J1LeftTrigger");
+		float rightTriggerJ1 = Input.GetAxis("J1RightTrigger");
 
 		bool aJ1 = Input.GetButtonDown("J1A");
 		bool bJ1 = Input.GetButtonDown("J1B");
 		bool startJ1 = Input.GetButtonDown("J1Start");
 
-		Vector3 movement = transform.TransformDirection(new Vector3(hAxis, 0f, vAxis) * speed * Time.deltaTime);
-		//transform.rotation = Quaternion.LookRotation(movement);
+		Vector3 movement = transform.TransformDirection(new Vector3(hAxisJ1, 0f, vAxisJ1) * speed * Time.deltaTime);
 
 		player.MovePosition(transform.position + movement);
 
-		if (aJ1){
+		/*if (aJ1){
 			Debug.Log("A");
 		}
 		if(bJ1){
@@ -53,6 +52,6 @@ public class PlayerController : MonoBehaviour {
 		}
 		if (vAxis != 0f){
 			Debug.Log("Vertical :" + vAxis.ToString());
-		}
+		}*/
 	}
 }
