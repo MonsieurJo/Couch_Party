@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class MenuLobby : MonoBehaviour {
 
+	public GameObject j1PushBUI;
 	public GameObject j2PushAUI;
 	public GameObject j2PushBUI;
 	public GameObject j3PushAUI;
@@ -14,15 +15,14 @@ public class MenuLobby : MonoBehaviour {
 	public GameObject j4PushBUI;
 
 	void Start () {
-				// if (Input.GetKeyDown("J1B"))
-		// {
-		// 	SceneManagement.LoadScene ("SceneTestTransition") ;
-		// }
-		
+
 	}
 	
 	void Update () 
 	{
+		if (Input.GetKeyUp("r")){
+			TogglePlayerOneEnd();
+		}
 		if(Input.GetKeyUp("h")){
 			TogglePlayerTwoUI();
 		}
@@ -31,6 +31,23 @@ public class MenuLobby : MonoBehaviour {
 		}
 		if(Input.GetKeyUp("k")){
 			TogglePlayerFourUI();
+		}
+		if(Input.GetKeyUp("y")){
+			TogglePlayerTwoUI2();
+		}
+		if(Input.GetKeyUp("u")){
+			TogglePlayerThreeUI2();
+		}
+		if(Input.GetKeyUp("i")){
+			TogglePlayerFourUI2();
+		}
+	}
+
+	void TogglePlayerOneEnd ()
+	{
+		if (j1PushBUI.activeSelf)
+		{
+			SceneManager.LoadScene(SceneTestTransition);
 		}
 	}
 
@@ -41,7 +58,11 @@ public class MenuLobby : MonoBehaviour {
 			j2PushAUI.SetActive(false);
 			j2PushBUI.SetActive(true);
 		}
-		else if (!j2PushAUI.activeSelf)
+	}
+
+	void TogglePlayerTwoUI2 ()
+	{
+		if (!j2PushAUI.activeSelf)
 		{
 			j2PushAUI.SetActive(true);
 			j2PushBUI.SetActive(false);
@@ -55,7 +76,11 @@ public class MenuLobby : MonoBehaviour {
 			j3PushAUI.SetActive(false);
 			j3PushBUI.SetActive(true);
 		}
-		else if (!j3PushAUI.activeSelf)
+	}
+
+	void TogglePlayerThreeUI2 ()
+	{
+		if (!j3PushAUI.activeSelf)
 		{
 			j3PushAUI.SetActive(true);
 			j3PushBUI.SetActive(false);
@@ -69,7 +94,11 @@ public class MenuLobby : MonoBehaviour {
 			j4PushAUI.SetActive(false);
 			j4PushBUI.SetActive(true);
 		}
-		else if (!j4PushAUI.activeSelf)
+	}
+
+	void TogglePlayerFourUI2 ()
+	{
+		if (!j4PushAUI.activeSelf)
 		{
 			j4PushAUI.SetActive(true);
 			j4PushBUI.SetActive(false);
