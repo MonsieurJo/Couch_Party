@@ -7,6 +7,8 @@ public class MenuManager : MonoBehaviour {
 
 	public GameObject lobby;
 	public GameObject startMenu;
+    public Button Play;
+    public Button Quit;
 
 
 	// Use this for initialization
@@ -17,10 +19,24 @@ public class MenuManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        float vAxis = Input.GetAxis("J1Vertical");
+        
 	}
 
-	public void PlayOnClick()
+    private void FixedUpdate()
+    {
+        float bKey = Input.GetAxis("J1B");
+        if (bKey == 1)
+        {
+            if (lobby == true)
+            {
+                ReturnToMenu();
+            }
+           
+        }
+    }
+
+    public void PlayOnClick()
     {
 		startMenu.SetActive(false);
 		lobby.SetActive(true);
