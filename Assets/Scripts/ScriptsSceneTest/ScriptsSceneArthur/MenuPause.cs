@@ -23,26 +23,26 @@ public class MenuPause : MonoBehaviour {
 
 		if (buttonpause1 < 0.70f)
 		{
-			pause();
+			Pause();
 		}
 
 		if (buttonpause2 < 0.70f)
 		{
-			pause();
+			Pause();
 		}
 
 		if (buttonpause3 < 0.70f)
 		{
-			pause();
+			Pause();
 		}
 
 		if (buttonpause4 < 0.70f)
 		{
-			pause();
+			Pause();
 		}
 	}
 
-	public void pause ()
+	public void Pause ()
 	{
 
 	paused = !paused;
