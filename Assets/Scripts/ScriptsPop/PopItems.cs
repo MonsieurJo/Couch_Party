@@ -9,13 +9,22 @@ public class PopItems : MonoBehaviour {
     private float nbmaxprefab =0f;
     public float spawnInterval = 3.0f;
 
+    private float xRandom;
+    private float zRandom;
+    public Rigidbody rb;
+
 	// Use this for initialization
 	void Start () {
 		InvokeRepeating("RandoPop", 0.001f, spawnInterval);
+
+		xRandom = UnityEngine.Random.Range(-1,1);
+		zRandom = UnityEngine.Random.Range(-1,1);
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixeUpdate () {
+
+		rb.AddForce(xRandom, 0, zRandom, ForceMode.Force);
 
 	}
 
@@ -30,5 +39,6 @@ public class PopItems : MonoBehaviour {
 		}
 
 	}
+
 
 }
