@@ -187,7 +187,7 @@ Transform:
   m_GameObject: {fileID: 81647173}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 11.550565, y: 2.6817594, z: 2.6817594}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -373,12 +373,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14a92601aa532e34dbfdd04960389082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabItem: {fileID: 1506767953898092, guid: 4cf1cc44c2e6ac6429f9e635b29cd686, type: 2}
-  poper: {fileID: 2137218673}
   popRandom:
-  - {fileID: 11400000, guid: 6779dadaee7042b44be728cd2a8ac017, type: 2}
-  - {fileID: 11400000, guid: ade656ef15849e945bf7a1f2dbe14d64, type: 2}
-  - {fileID: 11400000, guid: 5ed6b6ae3cb59804aac83eaef211e453, type: 2}
+  - {fileID: 1506767953898092, guid: 4cf1cc44c2e6ac6429f9e635b29cd686, type: 2}
+  - {fileID: 1169546707735120, guid: e620f2652fec854469b1ec754f9e6db8, type: 2}
+  spawnInterval: 3
 --- !u!4 &2137218675
 Transform:
   m_ObjectHideFlags: 0
@@ -386,7 +384,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2137218673}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.98852587, y: 9.92, z: -0.21}
+  m_LocalPosition: {x: 0, y: 18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
