@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour {
 		float hAxis = Input.GetAxis("J1Horizontal");
 		float vAxis = Input.GetAxis("J1Vertical");
 
-		//float leftTrigger = Input.GetAxis("J1LeftTrigger");
+		float leftTrigger = Input.GetAxis("J1LeftTrigger");
 		float rightTrigger = Input.GetAxis("J1RightTrigger");
 
 		Vector3 movement = transform.TransformDirection(new Vector3(hAxis, 0f, vAxis) * speed * Time.deltaTime);
@@ -42,6 +42,9 @@ public class PlayerController : MonoBehaviour {
 		}
 		if(rightTrigger != 0f){
 			Debug.Log("Right Trigger value:" +  rightTrigger.ToString());
+		}
+		if(leftTrigger != 0f){
+			Debug.Log("Left Trigger value:" + leftTrigger.ToString());
 		}
 	}
 }
