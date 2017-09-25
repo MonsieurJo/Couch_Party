@@ -11,7 +11,8 @@ public class MenuManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+        lobby.SetActive(false);
+        startMenu.SetActive(true);
 	}
 	
 	// Update is called once per frame
@@ -19,13 +20,21 @@ public class MenuManager : MonoBehaviour {
 		
 	}
 
-	public void PlayOnClick(){
+	public void PlayOnClick()
+    {
 		startMenu.SetActive(false);
 		lobby.SetActive(true);
 	}
 
-	public void QuitOnClick(){
+	public void QuitOnClick()
+    {
 		Application.Quit();
 		Debug.Log("Quit");
 	}
+
+    public void ReturnToMenu()
+    {
+        lobby.SetActive(false);
+        startMenu.SetActive(true);
+    }
 }
