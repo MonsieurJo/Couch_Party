@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SceneTristan.unity
+    guid: 0ea04d2c88d9d764e9d1056d6e1e98b6
+  - enabled: 1
+    path: Assets/Scenes/SceneTestTransition.unity
+    guid: 2533f243b8bf253478d76543fa60431c

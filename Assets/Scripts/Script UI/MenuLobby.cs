@@ -47,7 +47,7 @@ public class MenuLobby : MonoBehaviour {
 	{
 		if (j1PushBUI.activeSelf)
 		{
-			SceneManager.LoadScene(SceneTestTransition);
+			SceneManager.LoadScene("SceneTestTransition");
 		}
 	}
 
