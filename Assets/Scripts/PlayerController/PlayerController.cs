@@ -18,8 +18,8 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		float hAxis = Input.GetAxis("J1Horizontal");
-		float vAxis = Input.GetAxis("J1Vertical");
+		float hAxis = Input.GetAxisRaw("J1Horizontal");
+		float vAxis = Input.GetAxisRaw("J1Vertical");
 
 		float leftTrigger = Input.GetAxis("J1LeftTrigger");
 		float rightTrigger = Input.GetAxis("J1RightTrigger");
@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour {
 		bool startJ1 = Input.GetButtonDown("J1Start");
 
 		Vector3 movement = transform.TransformDirection(new Vector3(hAxis, 0f, vAxis) * speed * Time.deltaTime);
+		//transform.rotation = Quaternion.LookRotation(movement);
 
 		player.MovePosition(transform.position + movement);
 
