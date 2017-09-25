@@ -25,5 +25,17 @@ public class PlayerController : MonoBehaviour {
 		float rightTrigger = Input.GetAxis("J1RightTrigger");
 
 		Vector3 movement = transform.TransformDirection(new Vector3(hAxis, 0, vAxis) * speed * Time.deltaTime);
+
+		rig.MovePosition(transform.position + movement);
+
+		if (Input.GetButtonDown("J1A")){
+			Debug.Log("A");
+		}
+		if(Input.GetButtonDown("J1B")){
+			Debug.Log("B");
+		}
+		if(Input.GetButtonDown("J1Start")){
+			Debug.Log("Start");
+		}
 	}
 }
