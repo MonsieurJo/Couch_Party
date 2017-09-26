@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class MenuLobby : MonoBehaviour {
 
 	private int nbJoueur = 1;
+	public GameObject lobby;
+	public GameObject startMenu;
 	public GameObject j1PushBUI;
 	public GameObject j1StartUI;
 	public GameObject j2PushAUI;
@@ -24,6 +26,8 @@ public class MenuLobby : MonoBehaviour {
 	public GameObject tutoBlanc;
 
 	void Start () {
+		startMenu.SetActive(true);
+		lobby.SetActive(false);
 	//	DontDestroyOnLoad(MenuLobby);
 	}
 	
@@ -59,7 +63,8 @@ public class MenuLobby : MonoBehaviour {
 	{
 		if (j1PushBUI.activeSelf)
 		{
-			SceneManager.LoadScene("ScenePierre");
+			startMenu.SetActive(false);
+			lobby.SetActive(true);
 		}
 	}
 
