@@ -24,8 +24,8 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void MoveManager(){
-		float hAxisJ1 = Input.GetAxisRaw("J1Horizontal");
-		float vAxisJ1 = Input.GetAxisRaw("J1Vertical");
+		float hAxisJ1 = Input.GetAxis("J1Horizontal");
+		float vAxisJ1 = Input.GetAxis("J1Vertical");
 
 
 
@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour {
 
 		playerRb.MovePosition(transform.position + movement);
 
-		/*if (aJ1){
+		if (aJ1){
 			Debug.Log("A");
 		}
 		if(bJ1){
@@ -46,32 +46,35 @@ public class PlayerController : MonoBehaviour {
 		if(startJ1){
 			Debug.Log("Start");
 		}
-		if(hAxis != 0f){
-			Debug.Log("Horizontal:" + hAxis.ToString());
+		if(hAxisJ1 != 0f){
+			Debug.Log("Horizontal:" + hAxisJ1.ToString());
 		}
-		if(rightTrigger != 0f){
-			Debug.Log("Right Trigger value:" +  rightTrigger.ToString());
+		if(rightTriggerJ1 != 0f){
+			Debug.Log("Right Trigger value:" +  rightTriggerJ1.ToString());
 		}
-		if(leftTrigger != 0f){
-			Debug.Log("Left Trigger value:" + leftTrigger.ToString());
+		if(leftTriggerJ1 != 0f){
+			Debug.Log("Left Trigger value:" + leftTriggerJ1.ToString());
 		}
-		if (vAxis != 0f){
-			Debug.Log("Vertical :" + vAxis.ToString());
-		}*/
+		if (vAxisJ1 != 0f){
+			Debug.Log("Vertical :" + vAxisJ1.ToString());
+		}
 	}
 
 	void GrabManager(){
-		leftTriggerJ1 = Input.GetAxis("J1LeftTrigger");
+		//leftTriggerJ1 = Input.GetAxis("J1LeftTrigger");
 		rightTriggerJ1 = Input.GetAxis("J1RightTrigger");
 	}
 
-	void OnTriggerEnter (Collider other){
+	void OnTriggerStay (Collider other){
+		//bool isGrabbed = false;
 		if (other.gameObject.CompareTag("Item")){
-			if (rightTriggerJ1 > 0.70f){
+			while (rightTriggerJ1 > 0.70f){
+
 				other.gameObject.transform.parent = player.transform;
-			} else if(rightTriggerJ1 < 0.70f){
-				other.gameObject.transform.parent = null;
-			}
+				//other.gameObject.SetActive(true)
+			} //else if(rightTriggerJ1 < 0.70f){
+				//other.gameObject.transform.parent = null;
+			//}
 		}
 	}
 }
