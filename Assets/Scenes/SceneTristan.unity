@@ -738,6 +738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   j1PushBUI: {fileID: 656588056}
+  j1StartUI: {fileID: 656588056}
   j2PushAUI: {fileID: 73676543}
   j2PushBUI: {fileID: 867297242}
   j3PushAUI: {fileID: 547860040}
