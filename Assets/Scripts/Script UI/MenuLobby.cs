@@ -24,7 +24,7 @@ public class MenuLobby : MonoBehaviour {
 	public GameObject tutoBlanc;
 
 	void Start () {
-		DontDestroyOnLoad(GameObject);
+	//	DontDestroyOnLoad(GameObject);
 	}
 	
 	void Update () 
@@ -65,9 +65,8 @@ public class MenuLobby : MonoBehaviour {
 
     void TogglePlayerStart ()
     {
-    	if (j1StartUI.activeSelf)
+    	if (j1StartUI.activeSelf && nbJoueur > 1)
     	{
-    		nbJoueur > 1;
     		tutoBlanc.SetActive(true);
     	}
     }
