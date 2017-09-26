@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SceneTestTransition.unity
     guid: 2533f243b8bf253478d76543fa60431c
+  - enabled: 1
+    path: Assets/Scenes/ScenePierre.unity
+    guid: 2942acc21d342a44fb4fc76a8fd2d1c9
