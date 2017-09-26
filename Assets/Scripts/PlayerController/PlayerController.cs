@@ -8,17 +8,32 @@ public class PlayerController : MonoBehaviour {
 
 	private Rigidbody playerRb;
 	public GameObject playerGrabPosition;
-	private float leftTriggerJ1;
-	private float rightTriggerJ1;
+	private float leftTrigger;
+	private float rightTrigger;
+	private float hAxis;
+	private float vAxis;
+	private bool aButton;
+	private bool bButton;
+	private bool startButton;
 	private bool isGrabbed = false;
 	private Rigidbody objectGrabbedRb;
 	private GameObject objectGrabbed;
 	public float thrust;
+	public int playerNumber;
 
 
 	// Use this for initialization
 	void Start () {
 		playerRb = GetComponent<Rigidbody>();
+		if (gameObject.CompareTag("J1")){
+			playerNumber = 1;
+		}else if (gameObject.CompareTag("J2")){
+			playerNumber = 2;
+		}else if (gameObject.CompareTag("J3")){
+			playerNumber = 3;
+		}else if (gameObject.CompareTag("J4")){
+			playerNumber = 4;
+		}
 	}
 	
 	// Update is called once per frame
@@ -29,56 +44,57 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void MoveManager(){
-		float hAxisJ1 = Input.GetAxis("J1Horizontal");
-		float vAxisJ1 = Input.GetAxis("J1Vertical");
+		hAxis = Input.GetAxis("J"+playerNumber.ToString()+"Horizontal");
+		vAxis = Input.GetAxis("J"+playerNumber.ToString()+"Vertical");
 
+		aButton = Input.GetButtonDown("J"+playerNumber.ToString()+"A");
+		bButton = Input.GetButtonDown("J"+playerNumber.ToString()+"B");
+		startButton = Input.GetButtonDown("J"+playerNumber.ToString()+"Start");
+		
 
-
-		bool aJ1 = Input.GetButtonDown("J1A");
-		bool bJ1 = Input.GetButtonDown("J1B");
-		bool startJ1 = Input.GetButtonDown("J1Start");
-
-		Vector3 movement = transform.TransformDirection(new Vector3(hAxisJ1, 0f, vAxisJ1) * speed * Time.deltaTime);
+		Vector3 movement = transform.TransformDirection(new Vector3(hAxis, 0f, vAxis) * speed * Time.deltaTime);
 
 		playerRb.MovePosition(transform.position + movement);
 
-		if (aJ1){
+		if (aButton){
 			Debug.Log("A");
 		}
-		if(bJ1){
+		if(bButton){
 			Debug.Log("B");
 		}
-		if(startJ1){
+		if(startButton){
 			Debug.Log("Start");
 		}
-		if(hAxisJ1 != 0f){
-			Debug.Log("Horizontal:" + hAxisJ1.ToString());
+		if(hAxis != 0f){
+			Debug.Log("Horizontal:" + hAxis.ToString());
 		}
-		if(rightTriggerJ1 != 0f){
-			Debug.Log("Right Trigger value:" +  rightTriggerJ1.ToString());
+		if(rightTrigger != 0f){
+			Debug.Log("Right Trigger value:" +  rightTrigger.ToString());
 		}
-		if(leftTriggerJ1 != 0f){
-			Debug.Log("Left Trigger value:" + leftTriggerJ1.ToString());
+		if(leftTrigger != 0f){
+			Debug.Log("Left Trigger value:" + leftTrigger.ToString());
 		}
-		if (vAxisJ1 != 0f){
-			Debug.Log("Vertical :" + vAxisJ1.ToString());
+		if (vAxis != 0f){
+			Debug.Log("Vertical :" + vAxis.ToString());
 		}
 	}
 
 	void GrabManager(){
-		leftTriggerJ1 = Input.GetAxis("J1LeftTrigger");
-		rightTriggerJ1 = Input.GetAxis("J1RightTrigger");
+		leftTrigger = Input.GetAxis("J"+playerNumber.ToString()+"LeftTrigger");
+		rightTrigger = Input.GetAxis("J"+playerNumber.ToString()+"RightTrigger");
 	}
 
 	void OnTriggerStay (Collider other){
 		if (other.gameObject.CompareTag("Item")){
-			if (rightTriggerJ1 > 0.70f){
+			if (rightTrigger > 0.70f){
 				other.gameObject.transform.position = playerGrabPosition.transform.position;
 				isGrabbed = true;
 				objectGrabbedRb = other.GetComponent<Rigidbody>();
+				objectGrabbedRb.isKinematic = true;
 				objectGrabbed = other.gameObject;
-			}else if(rightTriggerJ1 < 0.70f || leftTriggerJ1 > 0.70f){
+			}else if(rightTrigger < 0.70f || leftTrigger > 0.70f){
 				other.gameObject.transform.position = other.gameObject.transform.position;
+				objectGrabbedRb.isKinematic = false;
 				objectGrabbedRb = null;
 				objectGrabbed = null;
 				isGrabbed = false;
@@ -87,8 +103,8 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void ThrowItem(){
-		if (leftTriggerJ1 > 0.70f){
-			objectGrabbedRb.AddForce (0, 30, thrust, ForceMode.Impulse);
+		if (leftTrigger > 0.70f){
+			objectGrabbedRb.AddForce (0, thrust, thrust, ForceMode.Impulse);
 		}
 	}
 }
