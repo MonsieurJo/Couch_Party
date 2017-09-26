@@ -1,0 +1,160 @@
+fileFormatVersion: 2
+guid: dce522913e45e8a49b82844e5975d7b0
+timeCreated: 1506419468
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Barre1
+    100002: Barre2
+    100004: Barre3
+    100006: Barre4
+    100008: BarreCentrale
+    100010: "BarrePoign\xE9eDroit"
+    100012: "BarrePoign\xE9eGauche"
+    100014: BarreRoueDroite
+    100016: BarreRoueGauche
+    100018: //RootNode
+    100020: Planche1
+    100022: Planche2
+    100024: "Poign\xE9eDroit"
+    100026: "Poign\xE9eGauche"
+    100028: RoueDroite
+    100030: RoueGauche
+    400000: Barre1
+    400002: Barre2
+    400004: Barre3
+    400006: Barre4
+    400008: BarreCentrale
+    400010: "BarrePoign\xE9eDroit"
+    400012: "BarrePoign\xE9eGauche"
+    400014: BarreRoueDroite
+    400016: BarreRoueGauche
+    400018: //RootNode
+    400020: Planche1
+    400022: Planche2
+    400024: "Poign\xE9eDroit"
+    400026: "Poign\xE9eGauche"
+    400028: RoueDroite
+    400030: RoueGauche
+    2300000: Barre1
+    2300002: Barre2
+    2300004: Barre3
+    2300006: Barre4
+    2300008: BarreCentrale
+    2300010: "BarrePoign\xE9eDroit"
+    2300012: "BarrePoign\xE9eGauche"
+    2300014: BarreRoueDroite
+    2300016: BarreRoueGauche
+    2300018: Planche1
+    2300020: Planche2
+    2300022: "Poign\xE9eDroit"
+    2300024: "Poign\xE9eGauche"
+    2300026: RoueDroite
+    2300028: RoueGauche
+    3300000: Barre1
+    3300002: Barre2
+    3300004: Barre3
+    3300006: Barre4
+    3300008: BarreCentrale
+    3300010: "BarrePoign\xE9eDroit"
+    3300012: "BarrePoign\xE9eGauche"
+    3300014: BarreRoueDroite
+    3300016: BarreRoueGauche
+    3300018: Planche1
+    3300020: Planche2
+    3300022: "Poign\xE9eDroit"
+    3300024: "Poign\xE9eGauche"
+    3300026: RoueDroite
+    3300028: RoueGauche
+    4300000: Barre1
+    4300002: Barre2
+    4300004: Barre3
+    4300006: Planche1
+    4300008: BarreRoueDroite
+    4300010: BarreRoueGauche
+    4300012: RoueDroite
+    4300014: RoueGauche
+    4300016: BarreCentrale
+    4300018: Planche2
+    4300020: Barre4
+    4300022: "BarrePoign\xE9eDroit"
+    4300024: "BarrePoign\xE9eGauche"
+    4300026: "Poign\xE9eDroit"
+    4300028: "Poign\xE9eGauche"
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
