@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MenuLobby : MonoBehaviour {
 
 	public GameObject j1PushBUI;
+	public GameObject j1StartUI;
 	public GameObject j2PushAUI;
 	public GameObject j2PushBUI;
 	public GameObject j3PushAUI;
@@ -22,6 +23,9 @@ public class MenuLobby : MonoBehaviour {
 	{
 		if (Input.GetKeyUp("r")){
 			TogglePlayerOneEnd();
+		}
+		if (Input.GetKeyUp("space")){
+			TogglePlayerStart();
 		}
 		if(Input.GetKeyUp("h")){
 			TogglePlayerTwoUI();
@@ -51,6 +55,13 @@ public class MenuLobby : MonoBehaviour {
 		}
 	}
 
+    void TogglePlayerStart ()
+    {
+    	if (j1StartUI.activeSelf)
+    	{
+    		SceneManager.LoadScene("Game");
+    	}
+    }
 	void TogglePlayerTwoUI ()
 	{
 		if (j2PushAUI.activeSelf)
