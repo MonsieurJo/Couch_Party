@@ -24,33 +24,33 @@ public class MenuLobby : MonoBehaviour {
 	public GameObject tutoBlanc;
 
 	void Start () {
-	//	DontDestroyOnLoad(GameObject);
+	//	DontDestroyOnLoad(MenuLobby);
 	}
 	
 	void Update () 
 	{
-		if (Input.GetKeyUp("J1B")){
+		if (Input.GetButtonDown("J1B")){
 			TogglePlayerOneEnd();
 		}
-		if (Input.GetKeyUp("J1Start")){
+		if (Input.GetButtonDown("J1Start")){
 			TogglePlayerStart();
 		}
-		if(Input.GetKeyUp("J2A")){
+		if(Input.GetButtonDown("J2A")){
 			TogglePlayerTwoUI();
 		}
-		if(Input.GetKeyUp("J3A")){
+		if(Input.GetButtonDown("J3A")){
 			TogglePlayerThreeUI();
 		}
-		if(Input.GetKeyUp("J4A")){
+		if(Input.GetButtonDown("J4A")){
 			TogglePlayerFourUI();
 		}
-		if(Input.GetKeyUp("J2B")){
+		if(Input.GetButtonDown("J2B")){
 			TogglePlayerTwoUI2();
 		}
-		if(Input.GetKeyUp("J3B")){
+		if(Input.GetButtonDown("J3B")){
 			TogglePlayerThreeUI2();
 		}
-		if(Input.GetKeyUp("J4B")){
+		if(Input.GetButtonDown("J4B")){
 			TogglePlayerFourUI2();
 		}
 	}
