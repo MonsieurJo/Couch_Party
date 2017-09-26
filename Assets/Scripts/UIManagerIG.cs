@@ -40,6 +40,7 @@ public class UIManagerIG : MonoBehaviour {
 		{
 			classement.SetActive(true);
 			uiIG.SetActive(false);
+			Time.timeScale = 0;
 		}
 
 		if(timerSecondes > 0)
