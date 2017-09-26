@@ -11,6 +11,9 @@ public class PlayerController : MonoBehaviour {
 	private float leftTriggerJ1;
 	private float rightTriggerJ1;
 	private bool isGrabbed = false;
+	private Rigidbody objectGrabbedRb;
+	private GameObject objectGrabbed;
+	public float thrust;
 
 
 	// Use this for initialization
@@ -22,6 +25,7 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 		MoveManager();
 		GrabManager();
+		ThrowItem();
 	}
 
 	void MoveManager(){
@@ -68,16 +72,23 @@ public class PlayerController : MonoBehaviour {
 
 	void OnTriggerStay (Collider other){
 		if (other.gameObject.CompareTag("Item")){
-			if (isGrabbed == false){
-				if (rightTriggerJ1 > 0.70f){
-					other.gameObject.transform.position = playerGrabPosition.transform.position;
-					isGrabbed = true;
-				}else if(rightTriggerJ1 < 0.70f){
-					other.gameObject.transform.position = other.gameObject.transform.position;
-					isGrabbed = false;
-				}
+			if (rightTriggerJ1 > 0.70f){
+				other.gameObject.transform.position = playerGrabPosition.transform.position;
+				isGrabbed = true;
+				objectGrabbedRb = other.GetComponent<Rigidbody>();
+				objectGrabbed = other.gameObject;
+			}else if(rightTriggerJ1 < 0.70f || leftTriggerJ1 > 0.70f){
+				other.gameObject.transform.position = other.gameObject.transform.position;
+				objectGrabbedRb = null;
+				objectGrabbed = null;
+				isGrabbed = false;
 			}
-			
+		}
+	}
+
+	void ThrowItem(){
+		if (leftTriggerJ1 > 0.70f){
+			objectGrabbedRb.AddForce (0, 30, thrust, ForceMode.Impulse);
 		}
 	}
 }
