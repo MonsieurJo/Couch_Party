@@ -179,6 +179,6 @@ public class MenuLobby : MonoBehaviour {
 
 	public void BouttonNon()
 	{
-		SceneManager.LoadScene("SceneGame");
+		SceneManager.LoadScene("SceneJeremy");
 	}
 }
