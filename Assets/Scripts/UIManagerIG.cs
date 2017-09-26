@@ -67,6 +67,10 @@ public class UIManagerIG : MonoBehaviour {
 	void AfficheTimer () {
 
 		timer.text = timerMinutes.ToString("F0") + " m " + timerSecondes.ToString("F0") + " s ";
+		if (timerSecondes < 9)
+		{
+			timer.text = timerMinutes.ToString("F0") + " m " + "0" + timerSecondes.ToString("F0") + " s ";
+		}
 	}
 
 
