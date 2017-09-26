@@ -9,6 +9,7 @@ TagManager:
   - J2
   - J3
   - J4
+  - Container
   layers:
   - Default
   - TransparentFX

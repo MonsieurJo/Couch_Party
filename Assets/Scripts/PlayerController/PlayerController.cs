@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour {
 	private bool bButton;
 	private bool startButton;
 	private bool isGrabbed = false;
+	private bool isGrabbing = false;
 	private Rigidbody objectGrabbedRb;
 	private GameObject objectGrabbed;
 	public float thrust;
@@ -88,6 +89,7 @@ public class PlayerController : MonoBehaviour {
 			if (rightTrigger > 0.70f){
 				other.gameObject.transform.position = playerGrabPosition.transform.position;
 				isGrabbed = true;
+				isGrabbing = true;
 				objectGrabbedRb = other.GetComponent<Rigidbody>();
 				objectGrabbedRb.isKinematic = true;
 				objectGrabbed = other.gameObject;
@@ -97,15 +99,8 @@ public class PlayerController : MonoBehaviour {
 				objectGrabbedRb = null;
 				objectGrabbed = null;
 				isGrabbed = false;
+				isGrabbing = false;
 			}
 		}
 	}
-
-	void ItemInContainer(){
-		if (aButton){
-			objectGrabbedRb.AddForce (0, thrust, thrust, ForceMode.Impulse);
-		}
-	}
-
-
 }
