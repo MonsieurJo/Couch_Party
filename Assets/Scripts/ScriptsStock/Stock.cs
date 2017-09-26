@@ -10,8 +10,10 @@ public class Stock : MonoBehaviour {
     public GameObject stockable;
     public GameObject container;
 
-	// Use this for initialization
-	void Start () {
+    public bool GetButtonDown { get; private set; }
+
+    // Use this for initialization
+    void Start () {
         currentStock = 0;
 	}
 	
@@ -22,10 +24,14 @@ public class Stock : MonoBehaviour {
 
     private void OnTriggerEnter(Collider stockable)
     {
-
-        if (currentStock <= maxStock)
-        Destroy(stockable.gameObject);
-        currentStock = currentStock + addStock;
+        if (Input.GetButtonDown("J1A") == true)
+        {
+            if (currentStock <= maxStock)
+             { 
+             Destroy(stockable.gameObject);
+             currentStock = currentStock + addStock;
+            }
+        }
     }
 
 }
