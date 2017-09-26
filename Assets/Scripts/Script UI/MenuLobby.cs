@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class MenuLobby : MonoBehaviour {
 
+	private int nbJoueur = 1;
 	public GameObject j1PushBUI;
 	public GameObject j1StartUI;
 	public GameObject j2PushAUI;
@@ -23,33 +24,33 @@ public class MenuLobby : MonoBehaviour {
 	public GameObject tutoBlanc;
 
 	void Start () {
-
+		DontDestroyOnLoad(GameObject);
 	}
 	
 	void Update () 
 	{
-		if (Input.GetKeyUp("r")){
+		if (Input.GetKeyUp("J1B")){
 			TogglePlayerOneEnd();
 		}
-		if (Input.GetKeyUp("space")){
+		if (Input.GetKeyUp("J1Start")){
 			TogglePlayerStart();
 		}
-		if(Input.GetKeyUp("h")){
+		if(Input.GetKeyUp("J2A")){
 			TogglePlayerTwoUI();
 		}
-		if(Input.GetKeyUp("j")){
+		if(Input.GetKeyUp("J3A")){
 			TogglePlayerThreeUI();
 		}
-		if(Input.GetKeyUp("k")){
+		if(Input.GetKeyUp("J4A")){
 			TogglePlayerFourUI();
 		}
-		if(Input.GetKeyUp("y")){
+		if(Input.GetKeyUp("J2B")){
 			TogglePlayerTwoUI2();
 		}
-		if(Input.GetKeyUp("u")){
+		if(Input.GetKeyUp("J3B")){
 			TogglePlayerThreeUI2();
 		}
-		if(Input.GetKeyUp("i")){
+		if(Input.GetKeyUp("J4B")){
 			TogglePlayerFourUI2();
 		}
 	}
@@ -66,6 +67,7 @@ public class MenuLobby : MonoBehaviour {
     {
     	if (j1StartUI.activeSelf)
     	{
+    		nbJoueur > 1;
     		tutoBlanc.SetActive(true);
     	}
     }
@@ -74,6 +76,7 @@ public class MenuLobby : MonoBehaviour {
 	{
 		if (j2PushAUI.activeSelf)
 		{
+			nbJoueur ++;
 			j2PushAUI.SetActive(false);
 			j2PushBUI.SetActive(true);
 		}
@@ -89,6 +92,7 @@ public class MenuLobby : MonoBehaviour {
 	{
 		if (!j2PushAUI.activeSelf)
 		{
+			nbJoueur --;
 			j2PushAUI.SetActive(true);
 			j2PushBUI.SetActive(false);
 		}
@@ -104,6 +108,7 @@ public class MenuLobby : MonoBehaviour {
 	{
 		if (j3PushAUI.activeSelf)
 		{
+			nbJoueur ++;
 			j3PushAUI.SetActive(false);
 			j3PushBUI.SetActive(true);
 		}
@@ -119,6 +124,7 @@ public class MenuLobby : MonoBehaviour {
 	{
 		if (!j3PushAUI.activeSelf)
 		{
+			nbJoueur --;
 			j3PushAUI.SetActive(true);
 			j3PushBUI.SetActive(false);
 		}
@@ -134,6 +140,7 @@ public class MenuLobby : MonoBehaviour {
 	{
 		if (j4PushAUI.activeSelf)
 		{
+			nbJoueur ++;
 			j4PushAUI.SetActive(false);
 			j4PushBUI.SetActive(true);
 		}
@@ -149,6 +156,7 @@ public class MenuLobby : MonoBehaviour {
 	{
 		if (!j4PushAUI.activeSelf)
 		{
+			nbJoueur --;
 			j4PushAUI.SetActive(true);
 			j4PushBUI.SetActive(false);
 		}
