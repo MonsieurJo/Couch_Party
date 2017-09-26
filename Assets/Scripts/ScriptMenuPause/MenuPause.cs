@@ -5,11 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuPause : MonoBehaviour {
 
-	private bool paused;
-	private bool buttonpause1 = false;
-	private bool buttonpause2 = false;
-	private bool buttonpause3 = false;
-	private bool buttonpause4 = false;
+	private bool paused = false;
 	public GameObject pause;
 	public string MenuPrincipal;
 
@@ -19,30 +15,6 @@ public class MenuPause : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		buttonpause1 = Input.GetButtonDown ("J1Start");
-		buttonpause2 = Input.GetButtonDown ("J2Start");
-		buttonpause3 = Input.GetButtonDown ("J3Start");
-		buttonpause4 = Input.GetButtonDown ("J4Start");
-
-		if (buttonpause1 = true)
-		{
-			Pause();
-		}
-
-		if (buttonpause2 = true)
-		{
-			Pause();
-		}
-
-		if (buttonpause3 = true)
-		{
-			Pause();
-		}
-
-		if (buttonpause4 = true)
-		{
-			Pause();
-		}
 
 		if (Input.GetKeyDown("p"));
 		{
@@ -54,12 +26,11 @@ public class MenuPause : MonoBehaviour {
 	{
 		 if(paused)
 		 {
-             paused = false;
+             paused = true;
              Time.timeScale = 0;
          }
-         else
+         else if (paused = false)
          {
-             paused = true;
              Time.timeScale = 1;
          }
 	}
