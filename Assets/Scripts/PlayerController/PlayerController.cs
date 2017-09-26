@@ -40,7 +40,6 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 		MoveManager();
 		GrabManager();
-		ThrowItem();
 	}
 
 	void MoveManager(){
@@ -92,7 +91,7 @@ public class PlayerController : MonoBehaviour {
 				objectGrabbedRb = other.GetComponent<Rigidbody>();
 				objectGrabbedRb.isKinematic = true;
 				objectGrabbed = other.gameObject;
-			}else if(rightTrigger < 0.70f || leftTrigger > 0.70f){
+			}else if(rightTrigger < 0.70f){
 				other.gameObject.transform.position = other.gameObject.transform.position;
 				objectGrabbedRb.isKinematic = false;
 				objectGrabbedRb = null;
@@ -102,9 +101,11 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
-	void ThrowItem(){
-		if (leftTrigger > 0.70f){
+	void ItemInContainer(){
+		if (aButton){
 			objectGrabbedRb.AddForce (0, thrust, thrust, ForceMode.Impulse);
 		}
 	}
+
+
 }
