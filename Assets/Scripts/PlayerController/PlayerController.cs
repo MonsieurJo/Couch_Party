@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour {
 	private bool aButton;
 	private bool bButton;
 	private bool startButton;
-	private bool isGrabbed = false;
 	private bool isGrabbing = false;
 	private Rigidbody objectGrabbedRb;
 	private GameObject objectGrabbed;
@@ -51,39 +50,40 @@ public class PlayerController : MonoBehaviour {
 		bButton = Input.GetButtonDown("J"+playerNumber.ToString()+"B");
 		startButton = Input.GetButtonDown("J"+playerNumber.ToString()+"Start");
 		
-
-		// Vector3 movement = transform.TransformDirection(new Vector3(hAxis, 0f, vAxis) * speed * Time.deltaTime);
-
 		Vector3 movement = new Vector3(hAxis, 0.0f, vAxis);
 		
 		playerRb.AddForce(movement.normalized * speed, ForceMode.Impulse);
 
-		if (movement != Vector3.zero)
+		if (movement != Vector3.zero){
     		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.2f);
+		}
+
+
+		// Vector3 movement = transform.TransformDirection(new Vector3(hAxis, 0f, vAxis) * speed * Time.deltaTime);
 		// transform.rotation = Quaternion.LookRotation(movement);
 		// transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement.normalized), 0.2f);
 
-		if (aButton){
-			Debug.Log("A");
-		}
-		if(bButton){
-			Debug.Log("B");
-		}
-		if(startButton){
-			Debug.Log("Start");
-		}
-		if(hAxis != 0f){
-			Debug.Log("Horizontal:" + hAxis.ToString());
-		}
-		if(rightTrigger != 0f){
-			Debug.Log("Right Trigger value:" +  rightTrigger.ToString());
-		}
-		if(leftTrigger != 0f){
-			Debug.Log("Left Trigger value:" + leftTrigger.ToString());
-		}
-		if (vAxis != 0f){
-			Debug.Log("Vertical :" + vAxis.ToString());
-		}
+		// if (aButton){
+		// 	Debug.Log("A");
+		// }
+		// if(bButton){
+		// 	Debug.Log("B");
+		// }
+		// if(startButton){
+		// 	Debug.Log("Start");
+		// }
+		// if(hAxis != 0f){
+		// 	Debug.Log("Horizontal:" + hAxis.ToString());
+		// }
+		// if(rightTrigger != 0f){
+		// 	Debug.Log("Right Trigger value:" +  rightTrigger.ToString());
+		// }
+		// if(leftTrigger != 0f){
+		// 	Debug.Log("Left Trigger value:" + leftTrigger.ToString());
+		// }
+		// if (vAxis != 0f){
+		// 	Debug.Log("Vertical :" + vAxis.ToString());
+		// }
 	}
 
 	void GrabManager(){
