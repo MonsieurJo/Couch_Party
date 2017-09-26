@@ -13,6 +13,8 @@ public class UIManagerIG : MonoBehaviour {
 	public Text timer;
 	private bool apB;
 
+	public GameObject decompteur;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -42,15 +44,6 @@ public class UIManagerIG : MonoBehaviour {
 			timerSecondes = 0;
 		}
 
-
-		if(timerMinutes == 0 && timerSecondes == 0)
-		{
-			classement.SetActive(true);
-			uiIG.SetActive(false);
-			Time.timeScale = 0;
-			apB = true;
-		}
-
 		if(timerSecondes > 0)
 		{
 			timerSecondes -= Time.deltaTime;
@@ -60,18 +53,20 @@ public class UIManagerIG : MonoBehaviour {
 		{
 			timerSecondes = 59.0f;
 			timerMinutes--;
-
 		}
+
+		if(timerMinutes == 0 && timerSecondes == 0)
+		{
+			classement.SetActive(true);
+			uiIG.SetActive(false);
+			Time.timeScale = 0;
+			apB = true;
+		}
+
 	}
 
 	void AfficheTimer () {
 
 		timer.text = timerMinutes.ToString("F0") + " m " + timerSecondes.ToString("F0") + " s ";
-		if (timerSecondes < 9)
-		{
-			timer.text = timerMinutes.ToString("F0") + " m " + "0" + timerSecondes.ToString("F0") + " s ";
-		}
 	}
-
-
 }
