@@ -52,9 +52,16 @@ public class PlayerController : MonoBehaviour {
 		startButton = Input.GetButtonDown("J"+playerNumber.ToString()+"Start");
 		
 
-		Vector3 movement = transform.TransformDirection(new Vector3(hAxis, 0f, vAxis) * speed * Time.deltaTime);
+		// Vector3 movement = transform.TransformDirection(new Vector3(hAxis, 0f, vAxis) * speed * Time.deltaTime);
 
-		playerRb.MovePosition(transform.position + movement);
+		Vector3 movement = new Vector3(hAxis, 0.0f, vAxis);
+		
+		playerRb.AddForce(movement.normalized * speed, ForceMode.Impulse);
+
+		if (movement != Vector3.zero)
+    		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.2f);
+		// transform.rotation = Quaternion.LookRotation(movement);
+		// transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement.normalized), 0.2f);
 
 		if (aButton){
 			Debug.Log("A");
@@ -84,23 +91,23 @@ public class PlayerController : MonoBehaviour {
 		rightTrigger = Input.GetAxis("J"+playerNumber.ToString()+"RightTrigger");
 	}
 
-	void OnTriggerStay (Collider other){
-		if (other.gameObject.CompareTag("Item")){
-			if (rightTrigger > 0.70f){
-				other.gameObject.transform.position = playerGrabPosition.transform.position;
-				isGrabbed = true;
-				isGrabbing = true;
-				objectGrabbedRb = other.GetComponent<Rigidbody>();
-				objectGrabbedRb.isKinematic = true;
-				objectGrabbed = other.gameObject;
-			}else if(rightTrigger < 0.70f){
-				other.gameObject.transform.position = other.gameObject.transform.position;
-				objectGrabbedRb.isKinematic = false;
-				objectGrabbedRb = null;
-				objectGrabbed = null;
-				isGrabbed = false;
-				isGrabbing = false;
-			}
-		}
-	}
+	// void OnTriggerStay (Collider other){
+	// 	if (other.gameObject.CompareTag("Item")){
+	// 		if (rightTrigger > 0.70f){
+	// 			other.gameObject.transform.position = playerGrabPosition.transform.position;
+	// 			isGrabbed = true;
+	// 			isGrabbing = true;
+	// 			objectGrabbedRb = other.GetComponent<Rigidbody>();
+	// 			objectGrabbedRb.isKinematic = true;
+	// 			objectGrabbed = other.gameObject;
+	// 		}else if(rightTrigger < 0.70f){
+	// 			other.gameObject.transform.position = other.gameObject.transform.position;
+	// 			objectGrabbedRb.isKinematic = false;
+	// 			objectGrabbedRb = null;
+	// 			objectGrabbed = null;
+	// 			isGrabbed = false;
+	// 			isGrabbing = false;
+	// 		}
+	// 	}
+	// }
 }
