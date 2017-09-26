@@ -7,9 +7,10 @@ public class PlayerController : MonoBehaviour {
 	public float speed;
 
 	private Rigidbody playerRb;
-	public GameObject player;
+	public GameObject playerGrabPosition;
 	private float leftTriggerJ1;
 	private float rightTriggerJ1;
+	private bool isGrabbed = false;
 
 
 	// Use this for initialization
@@ -61,20 +62,22 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void GrabManager(){
-		//leftTriggerJ1 = Input.GetAxis("J1LeftTrigger");
+		leftTriggerJ1 = Input.GetAxis("J1LeftTrigger");
 		rightTriggerJ1 = Input.GetAxis("J1RightTrigger");
 	}
 
 	void OnTriggerStay (Collider other){
-		//bool isGrabbed = false;
 		if (other.gameObject.CompareTag("Item")){
-			while (rightTriggerJ1 > 0.70f){
-
-				other.gameObject.transform.parent = player.transform;
-				//other.gameObject.SetActive(true)
-			} //else if(rightTriggerJ1 < 0.70f){
-				//other.gameObject.transform.parent = null;
-			//}
+			if (isGrabbed == false){
+				if (rightTriggerJ1 > 0.70f){
+					other.gameObject.transform.position = playerGrabPosition.transform.position;
+					isGrabbed = true;
+				}else if(rightTriggerJ1 < 0.70f){
+					other.gameObject.transform.position = other.gameObject.transform.position;
+					isGrabbed = false;
+				}
+			}
+			
 		}
 	}
 }
