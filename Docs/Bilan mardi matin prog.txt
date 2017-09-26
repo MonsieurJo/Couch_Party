@@ -1,10 +1,10 @@
 Timer OK
 Grab OK
-Mouvement pour 1 jour OK, à tester pour plusieurs joueurs
+Mouvement pour 1 joueur OK, à tester pour plusieurs joueurs
 système de stockage OK
+Freeze fin de partie OK
 Pause en cours (bientôt fini)
 Lobby en cours (bientôt fini)
-Freeze fin de partie commencé
 Jeter objet commencé
 Tutoriel commencé
 
