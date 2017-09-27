@@ -95,7 +95,7 @@ public class PlayerController : MonoBehaviour {
 	// 	if (other.gameObject.CompareTag("Item")){
 	// 		if (rightTrigger > 0.70f){
 	// 			other.gameObject.transform.position = playerGrabPosition.transform.position;
-	// 			isGrabbed = true;
+	// 			// isGrabbed = true;
 	// 			isGrabbing = true;
 	// 			objectGrabbedRb = other.GetComponent<Rigidbody>();
 	// 			objectGrabbedRb.isKinematic = true;
@@ -105,7 +105,7 @@ public class PlayerController : MonoBehaviour {
 	// 			objectGrabbedRb.isKinematic = false;
 	// 			objectGrabbedRb = null;
 	// 			objectGrabbed = null;
-	// 			isGrabbed = false;
+	// 			// isGrabbed = false;
 	// 			isGrabbing = false;
 	// 		}
 	// 	}
