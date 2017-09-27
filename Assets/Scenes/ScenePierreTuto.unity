@@ -577,6 +577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cf2bcc726e7b37438f67eeb88d50876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   moveTutorial: {fileID: 1059355746}
   grabTutorial: {fileID: 514559661}
   stockTutorial: {fileID: 547930433}
