@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: bd5cd725a0b201d4bbbf5aabdfb0d846
-timeCreated: 1506510792
+guid: 6b56ac89c4850a14ea0c80734a6bf0d9
+timeCreated: 1506515171
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -25,8 +25,8 @@ ModelImporter:
     3300006: PorteGauche
     4300000: PlafondSol
     4300002: PorteDroite
-    4300004: PorteGauche
-    4300006: "Cl\xE9"
+    4300004: "Cl\xE9"
+    4300006: PorteGauche
     9500000: //RootNode
   materials:
     importMaterials: 1
