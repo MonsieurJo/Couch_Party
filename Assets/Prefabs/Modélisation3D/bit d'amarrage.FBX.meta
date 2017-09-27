@@ -1,15 +1,22 @@
 fileFormatVersion: 2
-guid: c4c5d8965cdc9fd4489e1d160bca379c
-timeCreated: 1506516631
+guid: 1bbb2990d1b153a48805f0e92e85ccaa
+timeCreated: 1506516953
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
+    100000: Bit
+    100002: //RootNode
+    100004: "Cha\xEEne"
+    400000: Bit
+    400002: //RootNode
+    400004: "Cha\xEEne"
+    2300000: Bit
+    2300002: "Cha\xEEne"
+    3300000: Bit
+    3300002: "Cha\xEEne"
     4300000: Bit
+    4300002: "Cha\xEEne"
     9500000: //RootNode
   materials:
     importMaterials: 1
