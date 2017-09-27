@@ -12,25 +12,30 @@ public class PopItems : MonoBehaviour {
     private float xRandom;
     private float zRandom;
 
+    private Countdown GMS;
+
 	// Use this for initialization
 	void Start () {
+    GMS = GameObject.Find ("UImanager").GetComponent<Countdown>();
 		InvokeRepeating("RandoPop", 0.001f, spawnInterval);
 	}
 	
 
 	void RandoPop () {
+    if(GMS.counterDownDone == true)
+    {
 
-		if (nbmaxprefab < 100) {
-
-  			int tempory = UnityEngine.Random.Range(0,popRandom.Count);
-  			GameObject iGo;
-  			iGo = Instantiate(popRandom[tempory], transform.position, transform.rotation);
-  			xRandom = UnityEngine.Random.Range(-4,4);
-			zRandom = UnityEngine.Random.Range(-4,4);
-  			iGo.GetComponent<Rigidbody>().AddForce(xRandom, 0, zRandom, ForceMode.Impulse);
-        	nbmaxprefab += 1f;
-
-		}
+  		if (nbmaxprefab < 100) 
+      {
+    		int tempory = UnityEngine.Random.Range(0,popRandom.Count);
+    		GameObject iGo;
+    		iGo = Instantiate(popRandom[tempory], transform.position, transform.rotation);
+    		xRandom = UnityEngine.Random.Range(-4,4);
+  			zRandom = UnityEngine.Random.Range(-4,4);
+    		iGo.GetComponent<Rigidbody>().AddForce(xRandom, 0, zRandom, ForceMode.Impulse);
+        nbmaxprefab += 1f;
+  		}
+    }
 
 	}
 
