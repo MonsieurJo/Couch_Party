@@ -294,9 +294,117 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114106802035908862, guid: c40ca46b9ec751740b3d7e6e983b150a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c40ca46b9ec751740b3d7e6e983b150a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1573647062 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1573663994530432, guid: c40ca46b9ec751740b3d7e6e983b150a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1573647061}
+--- !u!1 &1573647063 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1434283238120976, guid: c40ca46b9ec751740b3d7e6e983b150a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1573647061}
+--- !u!1 &1573647064 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1434235080297570, guid: c40ca46b9ec751740b3d7e6e983b150a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1573647061}
+--- !u!1 &1573647065 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1997017618503054, guid: c40ca46b9ec751740b3d7e6e983b150a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1573647061}
+--- !u!1 &1573647066 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1440366979025138, guid: c40ca46b9ec751740b3d7e6e983b150a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1573647061}
+--- !u!1 &1573647067 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1279553487393844, guid: c40ca46b9ec751740b3d7e6e983b150a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1573647061}
+--- !u!1 &1573647068 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1667171149475214, guid: c40ca46b9ec751740b3d7e6e983b150a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1573647061}
+--- !u!1 &1573647069 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1800946310586596, guid: c40ca46b9ec751740b3d7e6e983b150a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1573647061}
+--- !u!1 &1573647070 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1523907045588872, guid: c40ca46b9ec751740b3d7e6e983b150a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1573647061}
+--- !u!1 &1573647071 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1963814212329746, guid: c40ca46b9ec751740b3d7e6e983b150a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1573647061}
+--- !u!1 &1573647072 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1316840944254776, guid: c40ca46b9ec751740b3d7e6e983b150a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1573647061}
+--- !u!1 &1573647073 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1985269836750468, guid: c40ca46b9ec751740b3d7e6e983b150a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1573647061}
+--- !u!1 &1573647074 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1724447502434586, guid: c40ca46b9ec751740b3d7e6e983b150a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1573647061}
+--- !u!1 &1573647075 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1147942790382178, guid: c40ca46b9ec751740b3d7e6e983b150a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1573647061}
+--- !u!1 &1573647076 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1283597268152722, guid: c40ca46b9ec751740b3d7e6e983b150a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1573647061}
+--- !u!1 &1573647077 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1117858806080948, guid: c40ca46b9ec751740b3d7e6e983b150a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1573647061}
+--- !u!114 &1573647078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1573647062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a874bdf7e73a3ef4fbb3b000601c154a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  j1PushBUI: {fileID: 1573647077}
+  j1StartUI: {fileID: 1573647076}
+  j2PushAUI: {fileID: 1573647075}
+  j2PushBUI: {fileID: 1573647074}
+  j2ImageNoir: {fileID: 1573647073}
+  j2ImageBlanc: {fileID: 1573647072}
+  j3PushAUI: {fileID: 1573647071}
+  j3PushBUI: {fileID: 1573647070}
+  j3ImageNoir: {fileID: 1573647069}
+  j3ImageBlanc: {fileID: 1573647068}
+  j4PushAUI: {fileID: 1573647067}
+  j4PushBUI: {fileID: 1573647066}
+  j4ImageNoir: {fileID: 1573647065}
+  j4ImageBlanc: {fileID: 1573647064}
+  tutoBlanc: {fileID: 1573647063}
+  canvas: {fileID: 1573647062}
 --- !u!1 &2115572444
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,13 +11,11 @@ public class MenuManager : MonoBehaviour {
     public Button Quit;
 
 
-	// Use this for initialization
 	void Start () {
         lobby.SetActive(false);
         startMenu.SetActive(true);
 	}
 	
-	// Update is called once per frame
 	void Update () {
         float vAxis = Input.GetAxis("J1Vertical");
         
