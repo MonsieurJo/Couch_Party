@@ -1147,7 +1147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerMinutes: 0
-  timerSecondes: 60
+  timerSecondes: 800
   classement: {fileID: 1841685629}
   uiIG: {fileID: 1216825189}
   timer: {fileID: 7263978}
