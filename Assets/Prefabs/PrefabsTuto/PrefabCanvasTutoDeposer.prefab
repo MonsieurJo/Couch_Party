@@ -45,7 +45,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1389056769022056
 GameObject:
   m_ObjectHideFlags: 1
@@ -161,7 +161,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "d\xE9poser un objet dans un conteneur\n\nPour d\xE9poser un objet dans
-    un conteneur attrapez un objet et appuyez sur A une fois que vous \xEAtes \xE0
+    un conteneur attrapez un objet et appuyez sur X une fois que vous \xEAtes \xE0
     cot\xE9 d'un conteneur. "
 --- !u!114 &114673459161513948
 MonoBehaviour:
@@ -316,6 +316,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.120770186, y: 0.7300784}
   m_AnchorMax: {x: 0.33244836, y: 1.0089637}
-  m_AnchoredPosition: {x: -45.186718, y: -102.91484}
+  m_AnchoredPosition: {x: -45.186768, y: -102.914856}
   m_SizeDelta: {x: 174.39087, y: 219.96967}
   m_Pivot: {x: 0.5, y: 0.5}
