@@ -58,8 +58,8 @@ GameObject:
   - component: {fileID: 114313534235609472}
   - component: {fileID: 65860776866359152}
   m_Layer: 0
-  m_Name: PlayerJ2
-  m_TagString: J1
+  m_Name: PlayerJ4
+  m_TagString: J4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,7 +118,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 565d1fccb92948c46b85e8f6d79184e5, type: 2}
+  - {fileID: 2100000, guid: 9ce5c85f2e4a8c64384e4f7418716e44, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -225,7 +225,7 @@ MonoBehaviour:
   grabCollider: {fileID: 65860776866359152}
   playerGrabPosition: {fileID: 1135106239054704}
   thrust: 1
-  playerNumber: 2
+  playerNumber: 4
 --- !u!136 &136602727558869630
 CapsuleCollider:
   m_ObjectHideFlags: 1
