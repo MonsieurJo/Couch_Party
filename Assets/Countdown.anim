@@ -20,7 +20,7 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: 0
+        time: 2
         value: 1
         inSlope: 0
         outSlope: 0
@@ -36,7 +36,7 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: 0
+        time: 2
         value: 1
         inSlope: 0
         outSlope: 0
@@ -52,7 +52,7 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: 0
+        time: 2
         value: 1
         inSlope: 0
         outSlope: 0
@@ -68,7 +68,7 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: 0
+        time: 2
         value: 1
         inSlope: 0
         outSlope: 0
@@ -101,11 +101,11 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: e60bdef5b98729b45a08eb5b890e6263, type: 3}
+      value: {fileID: 21300000, guid: 5e2f55f85a7499943b7778cd530683ed, type: 3}
     - time: 1
       value: {fileID: 21300000, guid: 4345c20c31db540449c7c828e0c642f7, type: 3}
     - time: 2
-      value: {fileID: 21300000, guid: 5e2f55f85a7499943b7778cd530683ed, type: 3}
+      value: {fileID: 21300000, guid: e60bdef5b98729b45a08eb5b890e6263, type: 3}
     - time: 3
       value: {fileID: 21300000, guid: 88ab358aed0e21a41b9f6abf756a8570, type: 3}
     - time: 3.8333333
@@ -159,9 +159,9 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: e60bdef5b98729b45a08eb5b890e6263, type: 3}
-    - {fileID: 21300000, guid: 4345c20c31db540449c7c828e0c642f7, type: 3}
     - {fileID: 21300000, guid: 5e2f55f85a7499943b7778cd530683ed, type: 3}
+    - {fileID: 21300000, guid: 4345c20c31db540449c7c828e0c642f7, type: 3}
+    - {fileID: 21300000, guid: e60bdef5b98729b45a08eb5b890e6263, type: 3}
     - {fileID: 21300000, guid: 88ab358aed0e21a41b9f6abf756a8570, type: 3}
     - {fileID: 21300000, guid: 88ab358aed0e21a41b9f6abf756a8570, type: 3}
     - {fileID: 21300000, guid: 88ab358aed0e21a41b9f6abf756a8570, type: 3}
@@ -190,7 +190,7 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: 0
+        time: 2
         value: 1
         inSlope: 0
         outSlope: 0
@@ -206,7 +206,7 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: 0
+        time: 2
         value: 1
         inSlope: 0
         outSlope: 0
@@ -222,7 +222,7 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: 0
+        time: 2
         value: 1
         inSlope: 0
         outSlope: 0
@@ -238,7 +238,7 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: 0
+        time: 2
         value: 1
         inSlope: 0
         outSlope: 0
