@@ -195,10 +195,10 @@ public class MenuLobby : MonoBehaviour {
 		Application.Quit();
 	}
 
-	void Update () {
-        float vAxis = Input.GetAxis("J1Vertical");
+	//void Update () {
+        //float vAxis = Input.GetAxis("J1Vertical");
         
-	}
+	//}
 
     private void FixedUpdate()
     {
@@ -207,7 +207,7 @@ public class MenuLobby : MonoBehaviour {
         {
             if (lobby == true)
             {
-                ReturnToMenu();
+//                ReturnToMenu();
             }
            
         }
