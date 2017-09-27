@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4863597327572290}
   - component: {fileID: 114537995222741938}
-  - component: {fileID: 65794185907369368}
   m_Layer: 0
   m_Name: Poper
   m_TagString: Untagged
@@ -35,24 +34,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1441769121029508}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 18.36, z: 0}
+  m_LocalPosition: {x: 65.1, y: 40.4, z: 41.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &65794185907369368
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1441769121029508}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114537995222741938
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -68,4 +55,5 @@ MonoBehaviour:
   - {fileID: 1506767953898092, guid: 4cf1cc44c2e6ac6429f9e635b29cd686, type: 2}
   - {fileID: 1601589484692256, guid: e620f2652fec854469b1ec754f9e6db8, type: 2}
   - {fileID: 1379090855759792, guid: ba0eb01bf0a43f34c94f220b652c6900, type: 2}
-  spawnInterval: 3
+  - {fileID: 1606620165657234, guid: a2e5685ef386e9d4882fba9e8c4cee67, type: 2}
+  spawnInterval: 1

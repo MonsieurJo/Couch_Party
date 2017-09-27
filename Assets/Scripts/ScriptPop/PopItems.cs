@@ -16,7 +16,7 @@ public class PopItems : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-    GMS = GameObject.Find ("UImanager").GetComponent<Countdown>();
+        GMS = GameObject.Find ("UImanager").GetComponent<Countdown>();
 		InvokeRepeating("RandoPop", 0.001f, spawnInterval);
 	}
 	
@@ -30,8 +30,8 @@ public class PopItems : MonoBehaviour {
     		int tempory = UnityEngine.Random.Range(0,popRandom.Count);
     		GameObject iGo;
     		iGo = Instantiate(popRandom[tempory], transform.position, transform.rotation);
-    		xRandom = UnityEngine.Random.Range(-4,4);
-  			zRandom = UnityEngine.Random.Range(-4,4);
+    		xRandom = UnityEngine.Random.Range(-7,7);
+  			zRandom = UnityEngine.Random.Range(-7,7);
     		iGo.GetComponent<Rigidbody>().AddForce(xRandom, 0, zRandom, ForceMode.Impulse);
         nbmaxprefab += 1f;
   		}
