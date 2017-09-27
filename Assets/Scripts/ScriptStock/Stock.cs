@@ -25,7 +25,7 @@ public class Stock : MonoBehaviour {
 
     private void OnTriggerEnter(Collider stockable)
     {
-        if (Input.GetButtonDown("J1A") == true)
+        if (stockable.CompareTag("Item"))
         {
             if (currentStock <= maxStock)
             { 
