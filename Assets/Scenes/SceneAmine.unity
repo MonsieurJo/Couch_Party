@@ -5102,6 +5102,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 82742868406802156, guid: 66614d6d1f4e98d4e8e12922fef9e9f9,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c31cd3405a3f6ff4ba81535cc578f178, type: 3}
+    - target: {fileID: 82742868406802156, guid: 66614d6d1f4e98d4e8e12922fef9e9f9,
+        type: 2}
+      propertyPath: BypassListenerEffects
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66614d6d1f4e98d4e8e12922fef9e9f9, type: 2}
   m_IsPrefabParent: 0
