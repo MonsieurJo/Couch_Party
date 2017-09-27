@@ -18,8 +18,26 @@ public class UIManagerIG : MonoBehaviour {
 
 	private Countdown GMS;
 
-	// Use this for initialization
-	void Start () {
+    private static UIManagerIG instance;
+    public static UIManagerIG Instance()
+    {
+        return instance;
+    }
+
+    void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
+
+    // Use this for initialization
+    void Start () {
 		GMS = GameObject.Find ("UImanager").GetComponent<Countdown>();
 		
 	}
@@ -77,4 +95,10 @@ public class UIManagerIG : MonoBehaviour {
 
 		timer.text = timerMinutes.ToString("F0") + " m " + timerSecondes.ToString("F0") + " s ";
 	}
+
+    public void TogglePause(int plyr)
+    {
+
+    }
+
 }
