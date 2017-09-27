@@ -644,6 +644,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc63a98434bcebb47abc375b18b33b3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lobby: {fileID: 0}
+  startMenu: {fileID: 0}
   j1PushBUI: {fileID: 1117858806080948}
   j1StartUI: {fileID: 1117858806080948}
   j2PushAUI: {fileID: 1147942790382178}
