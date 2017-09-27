@@ -52,6 +52,11 @@ public class PlayerController : MonoBehaviour {
 		bButton = Input.GetButtonDown("J"+myPlyrNmb.ToString()+"B");
 		startButton = Input.GetButtonDown("J"+myPlyrNmb.ToString()+"Start");
 
+        if(startButton)
+        {
+            UIManagerIG.Instance().TogglePause(myPlyrNmb);
+        }
+
 		leftTrigger = Input.GetAxis("J"+myPlyrNmb.ToString()+"LeftTrigger");
 		rightTrigger = Input.GetAxis("J"+myPlyrNmb.ToString()+"RightTrigger");
 
@@ -136,6 +141,14 @@ public class PlayerController : MonoBehaviour {
 		if (other.CompareTag("Item"))
         {
         	grabableObject = other.gameObject;
+        }
+
+        if (other.CompareTag("Container"))
+        {
+            if (Input.GetButtonDown("J1B"))
+            {
+
+            }
         }
     }
 
