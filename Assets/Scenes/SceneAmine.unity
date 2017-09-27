@@ -5112,6 +5112,16 @@ Prefab:
       propertyPath: BypassListenerEffects
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 82742868406802156, guid: 66614d6d1f4e98d4e8e12922fef9e9f9,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82742868406802156, guid: 66614d6d1f4e98d4e8e12922fef9e9f9,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66614d6d1f4e98d4e8e12922fef9e9f9, type: 2}
   m_IsPrefabParent: 0
