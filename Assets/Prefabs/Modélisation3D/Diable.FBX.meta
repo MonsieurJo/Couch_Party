@@ -1,87 +1,15 @@
 fileFormatVersion: 2
-guid: dce522913e45e8a49b82844e5975d7b0
-timeCreated: 1506419468
+guid: 9fc73c39bf5284a429050528038da868
+timeCreated: 1506513504
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
-    100000: Barre1
-    100002: Barre2
-    100004: Barre3
-    100006: Barre4
-    100008: BarreCentrale
-    100010: "BarrePoign\xE9eDroit"
-    100012: "BarrePoign\xE9eGauche"
-    100014: BarreRoueDroite
-    100016: BarreRoueGauche
-    100018: //RootNode
-    100020: Planche1
-    100022: Planche2
-    100024: "Poign\xE9eDroit"
-    100026: "Poign\xE9eGauche"
-    100028: RoueDroite
-    100030: RoueGauche
-    400000: Barre1
-    400002: Barre2
-    400004: Barre3
-    400006: Barre4
-    400008: BarreCentrale
-    400010: "BarrePoign\xE9eDroit"
-    400012: "BarrePoign\xE9eGauche"
-    400014: BarreRoueDroite
-    400016: BarreRoueGauche
-    400018: //RootNode
-    400020: Planche1
-    400022: Planche2
-    400024: "Poign\xE9eDroit"
-    400026: "Poign\xE9eGauche"
-    400028: RoueDroite
-    400030: RoueGauche
-    2300000: Barre1
-    2300002: Barre2
-    2300004: Barre3
-    2300006: Barre4
-    2300008: BarreCentrale
-    2300010: "BarrePoign\xE9eDroit"
-    2300012: "BarrePoign\xE9eGauche"
-    2300014: BarreRoueDroite
-    2300016: BarreRoueGauche
-    2300018: Planche1
-    2300020: Planche2
-    2300022: "Poign\xE9eDroit"
-    2300024: "Poign\xE9eGauche"
-    2300026: RoueDroite
-    2300028: RoueGauche
-    3300000: Barre1
-    3300002: Barre2
-    3300004: Barre3
-    3300006: Barre4
-    3300008: BarreCentrale
-    3300010: "BarrePoign\xE9eDroit"
-    3300012: "BarrePoign\xE9eGauche"
-    3300014: BarreRoueDroite
-    3300016: BarreRoueGauche
-    3300018: Planche1
-    3300020: Planche2
-    3300022: "Poign\xE9eDroit"
-    3300024: "Poign\xE9eGauche"
-    3300026: RoueDroite
-    3300028: RoueGauche
-    4300000: Barre1
-    4300002: Barre2
-    4300004: Barre3
-    4300006: Planche1
-    4300008: BarreRoueDroite
-    4300010: BarreRoueGauche
-    4300012: RoueDroite
-    4300014: RoueGauche
-    4300016: BarreCentrale
-    4300018: Planche2
-    4300020: Barre4
-    4300022: "BarrePoign\xE9eDroit"
-    4300024: "BarrePoign\xE9eGauche"
-    4300026: "Poign\xE9eDroit"
-    4300028: "Poign\xE9eGauche"
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Diable
     9500000: //RootNode
   materials:
     importMaterials: 1
