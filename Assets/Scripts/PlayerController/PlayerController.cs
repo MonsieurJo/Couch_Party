@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour {
 	public float thrust;
 	public int playerNumber;
 
+	private ItemManager itemManager;
 
 	// Use this for initialization
 	void Start () {
@@ -109,5 +110,29 @@ public class PlayerController : MonoBehaviour {
 	// 			isGrabbing = false;
 	// 		}
 	// 	}
-	// }
+
+	void OnTriggerStay (Collider other){
+		if (other.gameObject.CompareTag("Item")){
+			itemManager = other.gameObject.GetComponent<ItemManager>();
+			if (itemManager.playerGrabbing == playerNumber){
+				if (rightTrigger > 0.70f){
+					other.gameObject.transform.position = playerGrabPosition.transform.position;
+					// isGrabbed = true;
+					isGrabbing = true;
+					objectGrabbedRb = other.GetComponent<Rigidbody>();
+					objectGrabbedRb.isKinematic = true;
+					objectGrabbed = other.gameObject;
+					itemManager.isGrabbed = true;
+				}else if(rightTrigger < 0.70f){
+					other.gameObject.transform.position = other.gameObject.transform.position;
+					objectGrabbedRb.isKinematic = false;
+					objectGrabbedRb = null;
+					objectGrabbed = null;
+					itemManager.isGrabbed = false;
+					// isGrabbed = false;
+					isGrabbing = false;
+				}
+			}
+		}
+	}
 }
