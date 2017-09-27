@@ -28,7 +28,7 @@ public class Stock : MonoBehaviour {
         if (Input.GetButtonDown("J1A") == true)
         {
             if (currentStock <= maxStock)
-             { 
+            { 
              Destroy(stockable.gameObject);
              currentStock = currentStock + addStock;
             }

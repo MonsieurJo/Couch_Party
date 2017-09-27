@@ -42,8 +42,9 @@ public class MenuLobby : MonoBehaviour {
 
 	void TogglePlayerOneEnd ()
 	{
-		startMenu.SetActive(true);
-		lobby.SetActive(false);
+        if (startMenu == false);
+		    startMenu.SetActive(true);
+		    lobby.SetActive(false);
 	}
 
     void TogglePlayerStart ()
