@@ -26,6 +26,7 @@ public class MenuLobby : MonoBehaviour {
 	public GameObject j4ImageNoir;
 	public GameObject j4ImageBlanc;
 	public GameObject tutoBlanc;
+	private bool activeLby = false;
 
 	void Start () {
 		startMenu.SetActive(true);
@@ -35,41 +36,13 @@ public class MenuLobby : MonoBehaviour {
 	
 	void Update () 
 	{
-		float vAxis = Input.GetAxis("J1Vertical");
-        
-		if (Input.GetButtonDown("J1B")){
-			TogglePlayerOneEnd();
-		}
-		if (Input.GetButtonDown("J1Start")){
-			TogglePlayerStart();
-		}
-		if(Input.GetButtonDown("J2A")){
-			TogglePlayerTwoUI();
-		}
-		if(Input.GetButtonDown("J3A")){
-			TogglePlayerThreeUI();
-		}
-		if(Input.GetButtonDown("J4A")){
-			TogglePlayerFourUI();
-		}
-		if(Input.GetButtonDown("J2B")){
-			TogglePlayerTwoUI2();
-		}
-		if(Input.GetButtonDown("J3B")){
-			TogglePlayerThreeUI2();
-		}
-		if(Input.GetButtonDown("J4B")){
-			TogglePlayerFourUI2();
-		}
+		Controllers();
 	}
 
 	void TogglePlayerOneEnd ()
 	{
-		if (j1PushBUI.activeSelf && startMenu.activeSelf)
-		{
-			startMenu.SetActive(false);
-			lobby.SetActive(true);
-		}
+		startMenu.SetActive(true);
+		lobby.SetActive(false);
 	}
 
     void TogglePlayerStart ()
@@ -190,6 +163,7 @@ public class MenuLobby : MonoBehaviour {
     {
 		startMenu.SetActive(false);
 		lobby.SetActive(true);
+		activeLby = true;
 	}
 
 	public void QuitOnClick()
@@ -208,5 +182,39 @@ public class MenuLobby : MonoBehaviour {
             }
            
         }
+    }
+
+    void Controllers() {
+
+    	float vAxis = Input.GetAxis("J1Vertical");
+
+		if (activeLby == true)
+		{        
+			if (Input.GetButtonDown("J1B")){
+				TogglePlayerOneEnd();
+			}
+		}
+
+		if (Input.GetButtonDown("J1Start")){
+			TogglePlayerStart();
+		}
+		if(Input.GetButtonDown("J2A")){
+			TogglePlayerTwoUI();
+		}
+		if(Input.GetButtonDown("J3A")){
+			TogglePlayerThreeUI();
+		}
+		if(Input.GetButtonDown("J4A")){
+			TogglePlayerFourUI();
+		}
+		if(Input.GetButtonDown("J2B")){
+			TogglePlayerTwoUI2();
+		}
+		if(Input.GetButtonDown("J3B")){
+			TogglePlayerThreeUI2();
+		}
+		if(Input.GetButtonDown("J4B")){
+			TogglePlayerFourUI2();
+		}
     }
 }
