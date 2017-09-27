@@ -25,7 +25,7 @@ public class PopItems : MonoBehaviour {
     if(GMS.counterDownDone == true)
     {
 
-  		if (nbmaxprefab < 100) 
+  		if (nbmaxprefab < 1000) 
       {
     		int tempory = UnityEngine.Random.Range(0,popRandom.Count);
     		GameObject iGo;
