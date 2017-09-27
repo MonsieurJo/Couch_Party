@@ -65,7 +65,7 @@ public class MenuLobby : MonoBehaviour {
 
 	void TogglePlayerOneEnd ()
 	{
-		if (startMenu == true)
+		if (j1PushBUI.activeSelf && startMenu.activeSelf)
 		{
 			startMenu.SetActive(false);
 			lobby.SetActive(true);
