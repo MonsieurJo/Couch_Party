@@ -25,6 +25,10 @@ public class PlayerController : MonoBehaviour {
 	private GameObject objectGrabbed;
 	public float thrust;
 	public int playerNumber;
+    public GameObject stockable;
+    public int currentStock;
+    public int addStock;
+    public int maxStock;
 
 
     // Use this for initialization
@@ -143,11 +147,20 @@ public class PlayerController : MonoBehaviour {
         	grabableObject = other.gameObject;
         }
 
-        if (other.CompareTag("Container"))
+        if (other.CompareTag("Container") && isGrabbing == true)
         {
-            if (Input.GetButtonDown("J1B"))
+            if (Input.GetButtonDown("J1B") && currentStock < maxStock)
             {
-
+                grabableObject.transform.SetParent(null);
+                objectGrabbedRb.isKinematic = false;
+                objectGrabbedRb.useGravity = true;
+                objectGrabbedRb.GetComponent<Collider>().enabled = true;
+                objectGrabbedRb = null;
+                grabableObject = null;
+                isGrabbing = false;
+                grabCollider.enabled = true;
+                currentStock = currentStock + addStock;
+                Destroy(stockable.gameObject);
             }
         }
     }
