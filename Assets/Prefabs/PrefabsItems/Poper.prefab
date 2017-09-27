@@ -52,5 +52,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popRandom:
-  - {fileID: 1486510209119744, guid: 6bede06e5e2eeb049b2aa25b48b53716, type: 2}
+  - {fileID: 1506767953898092, guid: 4cf1cc44c2e6ac6429f9e635b29cd686, type: 2}
+  - {fileID: 1601589484692256, guid: e620f2652fec854469b1ec754f9e6db8, type: 2}
+  - {fileID: 1379090855759792, guid: ba0eb01bf0a43f34c94f220b652c6900, type: 2}
+  - {fileID: 1606620165657234, guid: a2e5685ef386e9d4882fba9e8c4cee67, type: 2}
   spawnInterval: 2
