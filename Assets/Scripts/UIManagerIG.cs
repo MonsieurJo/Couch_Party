@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,9 +14,13 @@ public class UIManagerIG : MonoBehaviour {
 	private bool apB;
 
 	public GameObject decompteur;
+	public float compteur;
+
+	private Countdown GMS;
 
 	// Use this for initialization
 	void Start () {
+		GMS = GameObject.Find ("UImanager").GetComponent<Countdown>();
 		
 	}
 	
@@ -33,6 +37,9 @@ public class UIManagerIG : MonoBehaviour {
 	}
 
 	void TimerIG () {
+
+	if(GMS.counterDownDone == true)
+	{
 
 		if(timerMinutes < 0)
 		{
@@ -62,6 +69,7 @@ public class UIManagerIG : MonoBehaviour {
 			Time.timeScale = 0;
 			apB = true;
 		}
+	}
 
 	}
 
