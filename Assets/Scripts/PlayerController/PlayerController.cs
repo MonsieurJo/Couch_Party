@@ -6,13 +6,18 @@ public class PlayerController : MonoBehaviour {
 
 	public float speed;
 
+	private GameObject grabableObject = null;
+	public BoxCollider grabCollider;
+	private int myPlyrNmb;
+
 	private Rigidbody playerRb;
 	public GameObject playerGrabPosition;
 	private float leftTrigger;
 	private float rightTrigger;
 	private float hAxis;
 	private float vAxis;
-	private bool aButton;
+	private bool aButtonDown;
+	private bool aButtonUp;
 	private bool bButton;
 	private bool startButton;
 	private bool isGrabbing = false;
@@ -20,36 +25,42 @@ public class PlayerController : MonoBehaviour {
 	private GameObject objectGrabbed;
 	public float thrust;
 	public int playerNumber;
-   // bool isGrabbed = false;
+
 
     // Use this for initialization
     void Start () {
-       
 		playerRb = GetComponent<Rigidbody>();
-		if (gameObject.CompareTag("J1")){
-			playerNumber = 1;
-		}else if (gameObject.CompareTag("J2")){
-			playerNumber = 2;
-		}else if (gameObject.CompareTag("J3")){
-			playerNumber = 3;
-		}else if (gameObject.CompareTag("J4")){
-			playerNumber = 4;
-		}
+		myPlyrNmb = playerNumber;
+		// if (gameObject.CompareTag("J"+myPlyrNmb.ToString()+"")){
+		// 	playerNumber = "+myPlyrNmb.ToString()+";
+		// }else if (gameObject.CompareTag("J2")){
+		// 	playerNumber = 2;
+		// }else if (gameObject.CompareTag("J3")){
+		// 	playerNumber = 3;
+		// }else if (gameObject.CompareTag("J4")){
+		// 	playerNumber = 4;
+		// }
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		hAxis = Input.GetAxis("J"+myPlyrNmb.ToString()+"Horizontal");
+		vAxis = Input.GetAxis("J"+myPlyrNmb.ToString()+"Vertical");
+
+		aButtonDown = Input.GetButtonDown("J"+myPlyrNmb.ToString()+"A");
+		aButtonUp = Input.GetButtonUp("J"+myPlyrNmb.ToString()+"A");
+		bButton = Input.GetButtonDown("J"+myPlyrNmb.ToString()+"B");
+		startButton = Input.GetButtonDown("J"+myPlyrNmb.ToString()+"Start");
+
+		leftTrigger = Input.GetAxis("J"+myPlyrNmb.ToString()+"LeftTrigger");
+		rightTrigger = Input.GetAxis("J"+myPlyrNmb.ToString()+"RightTrigger");
+
 		MoveManager();
 		GrabManager();
 	}
 
 	void MoveManager(){
-		hAxis = Input.GetAxis("J"+playerNumber.ToString()+"Horizontal");
-		vAxis = Input.GetAxis("J"+playerNumber.ToString()+"Vertical");
-
-		aButton = Input.GetButtonDown("J"+playerNumber.ToString()+"A");
-		bButton = Input.GetButtonDown("J"+playerNumber.ToString()+"B");
-		startButton = Input.GetButtonDown("J"+playerNumber.ToString()+"Start");
+		
 		
 		Vector3 movement = new Vector3(hAxis, 0.0f, vAxis);
 		
@@ -74,7 +85,7 @@ public class PlayerController : MonoBehaviour {
 		// 	Debug.Log("B");
 		// }
 		// if(startButton){
-		// 	Debug.Log("Start");
+		// 	Debug.Log("Start" + myPlyrNmb);
 		// }
 		// if(hAxis != 0f){
 		// 	Debug.Log("Horizontal:" + hAxis.ToString());
@@ -92,34 +103,49 @@ public class PlayerController : MonoBehaviour {
 
 	void GrabManager()
     {
-		leftTrigger = Input.GetAxis("J"+playerNumber.ToString()+"LeftTrigger");
-		rightTrigger = Input.GetAxis("J"+playerNumber.ToString()+"RightTrigger");
+
+		
+
+		if (aButtonDown && grabableObject != null)
+        {
+        	grabableObject.transform.position = playerGrabPosition.transform.position;
+			grabableObject.transform.SetParent(playerGrabPosition.transform);
+			isGrabbing = true;
+			grabCollider.enabled = false;
+			objectGrabbedRb = grabableObject.GetComponent<Rigidbody>();
+			objectGrabbedRb.isKinematic = true;
+			objectGrabbedRb.useGravity = false;
+			objectGrabbedRb.GetComponent<Collider>().enabled = false;
+		}
+
+        else if(aButtonUp && isGrabbing)
+        {
+			grabableObject.transform.SetParent(null);
+			objectGrabbedRb.isKinematic = false;
+			objectGrabbedRb.useGravity = true;
+			objectGrabbedRb.GetComponent<Collider>().enabled = true;
+			objectGrabbedRb = null;
+			grabableObject = null;
+			isGrabbing = false;
+			grabCollider.enabled = true;
+		}
 	}
 
-	void OnTriggerStay (Collider other)
+	void OnTriggerEnter (Collider other)
     {
-		if (other.gameObject.CompareTag("Item"))
+		if (other.CompareTag("Item"))
         {
-			if (rightTrigger > 0.70f)
-            {
-				other.gameObject.transform.position = playerGrabPosition.transform.position;
-				//isGrabbed = true;
-				isGrabbing = true;
-				objectGrabbedRb = other.GetComponent<Rigidbody>();
-				objectGrabbedRb.isKinematic = true;
-				objectGrabbed = other.gameObject;
-			}
-
-            else if(rightTrigger < 0.70f)
-            {
-				other.gameObject.transform.position = other.gameObject.transform.position;
-				objectGrabbedRb.isKinematic = false;
-				objectGrabbedRb = null;
-				objectGrabbed = null;
-				//isGrabbed = false;
-				isGrabbing = false;
-			}
-
-		}
+        	grabableObject = other.gameObject;
+        }
     }
+
+    void OnTriggerExit (Collider other)
+    {
+		if (other.CompareTag("Item"))
+        {
+        	grabableObject = null;
+        }
+    }
+
+
 }
