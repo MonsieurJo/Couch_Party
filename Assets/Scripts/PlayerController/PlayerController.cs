@@ -90,22 +90,23 @@ public class PlayerController : MonoBehaviour {
 		rightTrigger = Input.GetAxis("J"+playerNumber.ToString()+"RightTrigger");
 	}
 
-	// void OnTriggerStay (Collider other){
-	// 	if (other.gameObject.CompareTag("Item")){
-	// 		if (rightTrigger > 0.70f){
-	// 			other.gameObject.transform.position = playerGrabPosition.transform.position;
-	// 			// isGrabbed = true;
-	// 			isGrabbing = true;
-	// 			objectGrabbedRb = other.GetComponent<Rigidbody>();
-	// 			objectGrabbedRb.isKinematic = true;
-	// 			objectGrabbed = other.gameObject;
-	// 		}else if(rightTrigger < 0.70f){
-	// 			other.gameObject.transform.position = other.gameObject.transform.position;
-	// 			objectGrabbedRb.isKinematic = false;
-	// 			objectGrabbedRb = null;
-	// 			objectGrabbed = null;
-	// 			// isGrabbed = false;
-	// 			isGrabbing = false;
-	// 		}
-	// 	}
+	void OnTriggerStay (Collider other){
+		if (other.gameObject.CompareTag("Item")){
+			if (rightTrigger > 0.70f){
+				other.gameObject.transform.position = playerGrabPosition.transform.position;
+				// isGrabbed = true;
+				isGrabbing = true;
+				objectGrabbedRb = other.GetComponent<Rigidbody>();
+				objectGrabbedRb.isKinematic = true;
+				objectGrabbed = other.gameObject;
+			}else if(rightTrigger < 0.70f){
+				other.gameObject.transform.position = other.gameObject.transform.position;
+				objectGrabbedRb.isKinematic = false;
+				objectGrabbedRb = null;
+				objectGrabbed = null;
+				// isGrabbed = false;
+				isGrabbing = false;
+			}
+		}
+}
 }
