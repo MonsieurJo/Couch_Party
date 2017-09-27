@@ -20,9 +20,11 @@ public class PlayerController : MonoBehaviour {
 	private GameObject objectGrabbed;
 	public float thrust;
 	public int playerNumber;
+   // bool isGrabbed = false;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
+       
 		playerRb = GetComponent<Rigidbody>();
 		if (gameObject.CompareTag("J1")){
 			playerNumber = 1;
@@ -51,9 +53,12 @@ public class PlayerController : MonoBehaviour {
 		
 		Vector3 movement = new Vector3(hAxis, 0.0f, vAxis);
 		
+        if (hAxis < 0 || hAxis >0 || vAxis < 0 || vAxis > 0)
+        { 
 		playerRb.AddForce(movement.normalized * speed, ForceMode.Impulse);
+        }
 
-		if (movement != Vector3.zero){
+        if (movement != Vector3.zero){
     		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.2f);
 		}
 
@@ -85,28 +90,36 @@ public class PlayerController : MonoBehaviour {
 		// }
 	}
 
-	void GrabManager(){
+	void GrabManager()
+    {
 		leftTrigger = Input.GetAxis("J"+playerNumber.ToString()+"LeftTrigger");
 		rightTrigger = Input.GetAxis("J"+playerNumber.ToString()+"RightTrigger");
 	}
 
-	void OnTriggerStay (Collider other){
-		if (other.gameObject.CompareTag("Item")){
-			if (rightTrigger > 0.70f){
+	void OnTriggerStay (Collider other)
+    {
+		if (other.gameObject.CompareTag("Item"))
+        {
+			if (rightTrigger > 0.70f)
+            {
 				other.gameObject.transform.position = playerGrabPosition.transform.position;
-				// isGrabbed = true;
+				//isGrabbed = true;
 				isGrabbing = true;
 				objectGrabbedRb = other.GetComponent<Rigidbody>();
 				objectGrabbedRb.isKinematic = true;
 				objectGrabbed = other.gameObject;
-			}else if(rightTrigger < 0.70f){
+			}
+
+            else if(rightTrigger < 0.70f)
+            {
 				other.gameObject.transform.position = other.gameObject.transform.position;
 				objectGrabbedRb.isKinematic = false;
 				objectGrabbedRb = null;
 				objectGrabbed = null;
-				// isGrabbed = false;
+				//isGrabbed = false;
 				isGrabbing = false;
 			}
+
 		}
-}
+    }
 }

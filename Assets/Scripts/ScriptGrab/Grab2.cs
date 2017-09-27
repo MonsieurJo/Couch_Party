@@ -52,7 +52,7 @@ void Update()
 		{
 			GetComponent<Rigidbody>().isKinematic = false ;
 				transform.parent = null ;
-			beingCarried = false ;;
+			beingCarried = false ;
 		}
 	}
 }

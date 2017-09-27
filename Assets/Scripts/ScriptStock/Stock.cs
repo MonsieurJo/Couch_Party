@@ -7,6 +7,7 @@ public class Stock : MonoBehaviour {
     public int addStock;
     public int maxStock;
     private int currentStock;
+    private int score;
     public GameObject stockable;
     public GameObject container;
 
