@@ -35,6 +35,8 @@ public class MenuLobby : MonoBehaviour {
 	
 	void Update () 
 	{
+		float vAxis = Input.GetAxis("J1Vertical");
+        
 		if (Input.GetButtonDown("J1B")){
 			TogglePlayerOneEnd();
 		}
@@ -195,11 +197,6 @@ public class MenuLobby : MonoBehaviour {
 		Application.Quit();
 	}
 
-	//void Update () {
-        //float vAxis = Input.GetAxis("J1Vertical");
-        
-	//}
-
     private void FixedUpdate()
     {
         float bKey = Input.GetAxis("J1B");
@@ -207,7 +204,7 @@ public class MenuLobby : MonoBehaviour {
         {
             if (lobby == true)
             {
-//                ReturnToMenu();
+                TogglePlayerOneEnd();
             }
            
         }
