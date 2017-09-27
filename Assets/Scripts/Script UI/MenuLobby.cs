@@ -27,6 +27,7 @@ public class MenuLobby : MonoBehaviour {
 	public GameObject j4ImageBlanc;
 	public GameObject tutoBlanc;
 	private bool activeLby = false;
+	
 
 	void Start () {
 		startMenu.SetActive(true);
