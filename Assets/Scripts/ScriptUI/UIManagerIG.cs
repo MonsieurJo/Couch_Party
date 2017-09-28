@@ -145,4 +145,18 @@ public class UIManagerIG : MonoBehaviour {
     		currentScoreJ4 += scoreToAdd;
     	}
     }
+
+    public int DisplayScore(int playerNb){
+    	if (playerNb == 1){
+    		return currentScoreJ1;
+    	}else if (playerNb == 2){
+    		return currentScoreJ2;
+    	}else if (playerNb == 3){
+    		return currentScoreJ3;
+    	}else if (playerNb == 4){
+    		return currentScoreJ4;
+    	} else{
+    		return 0;
+    	}
+    }
 }
