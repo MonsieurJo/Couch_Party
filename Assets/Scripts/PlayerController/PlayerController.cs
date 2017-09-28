@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour {
     public GameObject stocking;
 
 
+    private Countdown GMS;
+
     // Use this for initialization
     void Start () {
     	if (gameObject.CompareTag("J1") && !MenuLobby.player1InGame){
@@ -42,6 +44,8 @@ public class PlayerController : MonoBehaviour {
     	}
 		playerRb = GetComponent<Rigidbody>();
 		myPlyrNmb = playerNumber;
+
+		GMS = GameObject.Find ("UImanager").GetComponent<Countdown>();
 		// if (gameObject.CompareTag("J"+myPlyrNmb.ToString()+"")){
 		// 	playerNumber = "+myPlyrNmb.ToString()+";
 		// }else if (gameObject.CompareTag("J2")){
@@ -72,16 +76,18 @@ public class PlayerController : MonoBehaviour {
 
 	void MoveManager(){
 		
+		if(GMS.counterDownDone == true)
+		{
+			Vector3 movement = new Vector3(hAxis, 0.0f, vAxis);
 		
-		Vector3 movement = new Vector3(hAxis, 0.0f, vAxis);
-		
-        if (hAxis < 0 || hAxis >0 || vAxis < 0 || vAxis > 0)
-        { 
-		playerRb.AddForce(movement.normalized * speed, ForceMode.Impulse);
-        }
+        	if (hAxis < 0 || hAxis >0 || vAxis < 0 || vAxis > 0)
+        	{ 
+			playerRb.AddForce(movement.normalized * speed, ForceMode.Impulse);
+        	}
 
-        if (movement != Vector3.zero){
-    		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.2f);
+        	if (movement != Vector3.zero){
+    			transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.2f);
+			}
 		}
 
 
