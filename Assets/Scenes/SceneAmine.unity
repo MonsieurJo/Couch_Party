@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -564,11 +564,11 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 96024140}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.3835814, y: 2.4192152, z: 6.21245}
+  m_Center: {x: -0.32101065, y: 0.9398173, z: 1.1591984}
 --- !u!1001 &124752245
 Prefab:
   m_ObjectHideFlags: 0
@@ -944,6 +944,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 5af5d688c8069d74b80cf4924f02cfb4, type: 2}
+    - target: {fileID: 100002, guid: 6b56ac89c4850a14ea0c80734a6bf0d9, type: 3}
+      propertyPath: m_TagString
+      value: Container
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b56ac89c4850a14ea0c80734a6bf0d9, type: 3}
   m_IsPrefabParent: 0
@@ -1265,7 +1269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerMinutes: 0
-  timerSecondes: 5
+  timerSecondes: 80
   classement: {fileID: 1841685629}
   uiIG: {fileID: 1216825189}
   timer: {fileID: 7263978}
@@ -4241,6 +4245,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 135f317b00c59bd429f7be0f26aede2b, type: 2}
+    - target: {fileID: 100002, guid: 6b56ac89c4850a14ea0c80734a6bf0d9, type: 3}
+      propertyPath: m_TagString
+      value: Container
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b56ac89c4850a14ea0c80734a6bf0d9, type: 3}
   m_IsPrefabParent: 0
@@ -4591,11 +4599,11 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1252279511}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.3835814, y: 2.4192152, z: 6.21245}
+  m_Center: {x: -0.32101065, y: 0.9398173, z: 1.1591984}
 --- !u!1001 &1256597904
 Prefab:
   m_ObjectHideFlags: 0
@@ -5196,6 +5204,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 58510a3d71394ff42b5bf5095fe7e6a8, type: 2}
+    - target: {fileID: 100002, guid: 6b56ac89c4850a14ea0c80734a6bf0d9, type: 3}
+      propertyPath: m_TagString
+      value: Container
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b56ac89c4850a14ea0c80734a6bf0d9, type: 3}
   m_IsPrefabParent: 0
@@ -5465,22 +5477,22 @@ BoxCollider:
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: 6b56ac89c4850a14ea0c80734a6bf0d9, type: 3}
   m_PrefabInternal: {fileID: 1186897987}
---- !u!4 &1595484903 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 400002, guid: 6b56ac89c4850a14ea0c80734a6bf0d9, type: 3}
-  m_PrefabInternal: {fileID: 1186897987}
---- !u!65 &1595484904
+--- !u!65 &1595484902
 BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1595484901}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.3835814, y: 2.4192152, z: 6.21245}
+  m_Center: {x: -0.32101065, y: 0.9398173, z: 1.1591984}
+--- !u!4 &1595484903 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400002, guid: 6b56ac89c4850a14ea0c80734a6bf0d9, type: 3}
+  m_PrefabInternal: {fileID: 1186897987}
 --- !u!1001 &1617646400
 Prefab:
   m_ObjectHideFlags: 0
@@ -6658,6 +6670,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c5cd39b2885c5f74987f4d722ffb4a12, type: 2}
+    - target: {fileID: 100002, guid: 6b56ac89c4850a14ea0c80734a6bf0d9, type: 3}
+      propertyPath: m_TagString
+      value: Container
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b56ac89c4850a14ea0c80734a6bf0d9, type: 3}
   m_IsPrefabParent: 0
@@ -7066,11 +7082,11 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2020982393}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.3835814, y: 2.4192152, z: 6.21245}
+  m_Center: {x: -0.32101065, y: 0.9398173, z: 1.1591984}
 --- !u!1001 &2061341101
 Prefab:
   m_ObjectHideFlags: 0
