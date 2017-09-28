@@ -25,13 +25,13 @@ public class MenuLobby : MonoBehaviour {
 	public GameObject j4PushBUI;
 	public GameObject j4ImageNoir;
 	public GameObject j4ImageBlanc;
-	public GameObject tutoBlanc;
-	private bool activeLby = false;
+	//private bool activeLby = false;
 	
 
 	void Start () {
 		startMenu.SetActive(true);
 		lobby.SetActive(false);
+		Play.Select();
 		DontDestroyOnLoad(gameObject);
 	}
 	
@@ -42,7 +42,7 @@ public class MenuLobby : MonoBehaviour {
 
 	void TogglePlayerOneEnd ()
 	{
-        if (startMenu == false);
+        if (!startMenu.activeSelf);
 		    startMenu.SetActive(true);
 		    lobby.SetActive(false);
 	}
@@ -51,7 +51,7 @@ public class MenuLobby : MonoBehaviour {
     {
     	if (j1StartUI.activeSelf && nbJoueur > 1)
     	{
-    		tutoBlanc.SetActive(true);
+    		SceneManager.LoadScene("SceneAmine");
     	}
     }
 
@@ -151,32 +151,24 @@ public class MenuLobby : MonoBehaviour {
 		}
 	}
 
-	public void BouttonOui()
-	{
-		SceneManager.LoadScene("SceneTuto");
-	}
-
-	public void BouttonNon()
-	{
-		SceneManager.LoadScene("SceneJeremy");
-	}
 
 	public void PlayOnClick()
     {
 		startMenu.SetActive(false);
 		lobby.SetActive(true);
-		activeLby = true;
+		//activeLby = true;
 	}
 
 	public void QuitOnClick()
     {
 		Application.Quit();
+		Debug.Log("Quit");
 	}
 
     private void FixedUpdate()
     {
-        float bKey = Input.GetAxis("J1B");
-        if (bKey == 1)
+        bool bKey = Input.GetButtonDown("J1B");
+        if (bKey)
         {
             if (lobby == true)
             {
@@ -190,12 +182,12 @@ public class MenuLobby : MonoBehaviour {
 
     	float vAxis = Input.GetAxis("J1Vertical");
 
-		if (activeLby == true)
-		{        
-			if (Input.GetButtonDown("J1B")){
-				TogglePlayerOneEnd();
-			}
+		//if (activeLby == true)
+		//{        
+		if (Input.GetButtonDown("J1B")){
+			TogglePlayerOneEnd();
 		}
+		//}
 
 		if (Input.GetButtonDown("J1Start")){
 			TogglePlayerStart();
