@@ -16,6 +16,16 @@ public class UIManagerIG : MonoBehaviour {
 	private bool isPaused = false;
 	public GameObject pauseScreen;
 
+	public Text scoreJ1;
+	public Text scoreJ2;
+	public Text scoreJ3;
+	public Text scoreJ4;
+
+	public int currentScoreJ1 = 0;
+	public int currentScoreJ2 = 0;
+	public int currentScoreJ3 = 0;
+	public int currentScoreJ4 = 0;
+
 	public GameObject decompteur;
 	public float compteur;
 
@@ -55,6 +65,7 @@ public class UIManagerIG : MonoBehaviour {
 
 		TimerIG();
 		AfficheTimer();
+		ScoreManager();
 	}
 
 	void TimerIG () {
@@ -116,4 +127,22 @@ public class UIManagerIG : MonoBehaviour {
     	plyrPause = plyr;
     }
 
+    public void ScoreManager(){
+    	scoreJ1.text = currentScoreJ1.ToString() + " points ";
+    	scoreJ2.text = currentScoreJ2.ToString() + " points ";
+    	scoreJ3.text = currentScoreJ3.ToString() + " points ";
+    	scoreJ4.text = currentScoreJ4.ToString() + " points ";
+    }
+
+    public void AddScore(int playerNb, int scoreToAdd){
+    	if (playerNb == 1){
+    		currentScoreJ1 += scoreToAdd;
+    	}else if (playerNb == 2){
+    		currentScoreJ2 += scoreToAdd;
+    	}else if (playerNb == 3){
+    		currentScoreJ3 += scoreToAdd;
+    	}else if (playerNb == 4){
+    		currentScoreJ4 += scoreToAdd;
+    	}
+    }
 }
