@@ -7,8 +7,13 @@ using UnityEngine.UI;
 public class MenuLobby : MonoBehaviour {
 
 	private int nbJoueur = 1;
+	public static bool player1InGame = true;
+	public static bool player2InGame = false;
+	public static bool player3InGame = false;
+	public static bool player4InGame = false;
 	public Button Play;
     public Button Quit;
+    public GameObject canvasGeneral;
 	public GameObject lobby;
 	public GameObject startMenu;
 	public GameObject j1PushBUI;
@@ -51,6 +56,7 @@ public class MenuLobby : MonoBehaviour {
     {
     	if (j1StartUI.activeSelf && nbJoueur > 1)
     	{
+    		canvasGeneral.SetActive(false);
     		SceneManager.LoadScene("SceneAmine");
     	}
     }
@@ -60,6 +66,7 @@ public class MenuLobby : MonoBehaviour {
 		if (j2PushAUI.activeSelf)
 		{
 			nbJoueur ++;
+			player2InGame = true;
 			j2PushAUI.SetActive(false);
 			j2PushBUI.SetActive(true);
 		}
@@ -76,6 +83,7 @@ public class MenuLobby : MonoBehaviour {
 		if (!j2PushAUI.activeSelf)
 		{
 			nbJoueur --;
+			player2InGame = false;
 			j2PushAUI.SetActive(true);
 			j2PushBUI.SetActive(false);
 		}
@@ -92,6 +100,7 @@ public class MenuLobby : MonoBehaviour {
 		if (j3PushAUI.activeSelf)
 		{
 			nbJoueur ++;
+			player3InGame = true;
 			j3PushAUI.SetActive(false);
 			j3PushBUI.SetActive(true);
 		}
@@ -108,6 +117,7 @@ public class MenuLobby : MonoBehaviour {
 		if (!j3PushAUI.activeSelf)
 		{
 			nbJoueur --;
+			player3InGame = false;
 			j3PushAUI.SetActive(true);
 			j3PushBUI.SetActive(false);
 		}
@@ -124,6 +134,7 @@ public class MenuLobby : MonoBehaviour {
 		if (j4PushAUI.activeSelf)
 		{
 			nbJoueur ++;
+			player4InGame = true;
 			j4PushAUI.SetActive(false);
 			j4PushBUI.SetActive(true);
 		}
@@ -140,6 +151,7 @@ public class MenuLobby : MonoBehaviour {
 		if (!j4PushAUI.activeSelf)
 		{
 			nbJoueur --;
+			player4InGame = false;
 			j4PushAUI.SetActive(true);
 			j4PushBUI.SetActive(false);
 		}

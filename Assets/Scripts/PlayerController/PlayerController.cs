@@ -31,6 +31,15 @@ public class PlayerController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+    	if (gameObject.CompareTag("J1") && !MenuLobby.player1InGame){
+    		gameObject.SetActive(false);
+    	}if (gameObject.CompareTag("J2") && !MenuLobby.player2InGame){
+    		gameObject.SetActive(false);
+    	}if (gameObject.CompareTag("J3") && !MenuLobby.player3InGame){
+    		gameObject.SetActive(false);
+    	}if (gameObject.CompareTag("J4") && !MenuLobby.player4InGame){
+    		gameObject.SetActive(false);
+    	}
 		playerRb = GetComponent<Rigidbody>();
 		myPlyrNmb = playerNumber;
 		// if (gameObject.CompareTag("J"+myPlyrNmb.ToString()+"")){
