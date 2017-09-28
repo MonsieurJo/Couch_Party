@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[RequireComponent(typeof(AudioSource))]
 
 public class PlayerController : MonoBehaviour {
 
@@ -25,10 +26,6 @@ public class PlayerController : MonoBehaviour {
 	private GameObject objectGrabbed;
 	public float thrust;
 	public int playerNumber;
-    public GameObject stockable;
-    public int currentStock;
-    public int addStock;
-    public int maxStock;
 
 
     // Use this for initialization
@@ -55,11 +52,6 @@ public class PlayerController : MonoBehaviour {
 		aButtonUp = Input.GetButtonUp("J"+myPlyrNmb.ToString()+"A");
 		bButton = Input.GetButtonDown("J"+myPlyrNmb.ToString()+"B");
 		startButton = Input.GetButtonDown("J"+myPlyrNmb.ToString()+"Start");
-
-        if(startButton)
-        {
-            UIManagerIG.Instance().TogglePause(myPlyrNmb);
-        }
 
 		leftTrigger = Input.GetAxis("J"+myPlyrNmb.ToString()+"LeftTrigger");
 		rightTrigger = Input.GetAxis("J"+myPlyrNmb.ToString()+"RightTrigger");
@@ -125,10 +117,12 @@ public class PlayerController : MonoBehaviour {
 			objectGrabbedRb.isKinematic = true;
 			objectGrabbedRb.useGravity = false;
 			objectGrabbedRb.GetComponent<Collider>().enabled = false;
+			AudioSource audio = GetComponent<AudioSource>();
+        	audio.Play();
 		}
 
         else if(aButtonUp && isGrabbing)
-        {
+        {	
 			grabableObject.transform.SetParent(null);
 			objectGrabbedRb.isKinematic = false;
 			objectGrabbedRb.useGravity = true;
@@ -145,23 +139,6 @@ public class PlayerController : MonoBehaviour {
 		if (other.CompareTag("Item"))
         {
         	grabableObject = other.gameObject;
-        }
-
-        if (other.CompareTag("Container") && isGrabbing == true)
-        {
-            if (Input.GetButtonDown("J1B") && currentStock < maxStock)
-            {
-                grabableObject.transform.SetParent(null);
-                objectGrabbedRb.isKinematic = false;
-                objectGrabbedRb.useGravity = true;
-                objectGrabbedRb.GetComponent<Collider>().enabled = true;
-                objectGrabbedRb = null;
-                grabableObject = null;
-                isGrabbing = false;
-                grabCollider.enabled = true;
-                currentStock = currentStock + addStock;
-                Destroy(stockable.gameObject);
-            }
         }
     }
 

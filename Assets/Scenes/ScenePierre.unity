@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -148,6 +148,36 @@ GameObject:
   m_PrefabParentObject: {fileID: 1573663994530432, guid: c40ca46b9ec751740b3d7e6e983b150a,
     type: 2}
   m_PrefabInternal: {fileID: 679951986}
+--- !u!114 &526364555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 526364550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc63a98434bcebb47abc375b18b33b3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Play: {fileID: 0}
+  Quit: {fileID: 0}
+  lobby: {fileID: 526364550}
+  startMenu: {fileID: 0}
+  j1PushBUI: {fileID: 260872350}
+  j1StartUI: {fileID: 1739488571}
+  j2PushAUI: {fileID: 1304889389}
+  j2PushBUI: {fileID: 282608554}
+  j2ImageNoir: {fileID: 120518657}
+  j2ImageBlanc: {fileID: 676153499}
+  j3PushAUI: {fileID: 148546311}
+  j3PushBUI: {fileID: 481389060}
+  j3ImageNoir: {fileID: 914565610}
+  j3ImageBlanc: {fileID: 1826196954}
+  j4PushAUI: {fileID: 30582192}
+  j4PushBUI: {fileID: 884200819}
+  j4ImageNoir: {fileID: 457713938}
+  j4ImageBlanc: {fileID: 1275856023}
+  tutoBlanc: {fileID: 763651939}
 --- !u!1 &676153499 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1316840944254776, guid: c40ca46b9ec751740b3d7e6e983b150a,
@@ -648,21 +678,21 @@ MonoBehaviour:
   Quit: {fileID: 2050831029}
   lobby: {fileID: 526364550}
   startMenu: {fileID: 1425239553}
-  j1PushBUI: {fileID: 260872350}
-  j1StartUI: {fileID: 260872350}
-  j2PushAUI: {fileID: 1304889389}
-  j2PushBUI: {fileID: 282608554}
-  j2ImageNoir: {fileID: 120518657}
-  j2ImageBlanc: {fileID: 676153499}
-  j3PushAUI: {fileID: 148546311}
-  j3PushBUI: {fileID: 481389060}
-  j3ImageNoir: {fileID: 914565610}
-  j3ImageBlanc: {fileID: 1826196954}
-  j4PushAUI: {fileID: 30582192}
-  j4PushBUI: {fileID: 884200819}
-  j4ImageNoir: {fileID: 457713938}
-  j4ImageBlanc: {fileID: 1275856023}
-  tutoBlanc: {fileID: 763651939}
+  j1PushBUI: {fileID: 0}
+  j1StartUI: {fileID: 0}
+  j2PushAUI: {fileID: 0}
+  j2PushBUI: {fileID: 0}
+  j2ImageNoir: {fileID: 0}
+  j2ImageBlanc: {fileID: 0}
+  j3PushAUI: {fileID: 0}
+  j3PushBUI: {fileID: 0}
+  j3ImageNoir: {fileID: 0}
+  j3ImageBlanc: {fileID: 0}
+  j4PushAUI: {fileID: 0}
+  j4PushBUI: {fileID: 0}
+  j4ImageNoir: {fileID: 0}
+  j4ImageBlanc: {fileID: 0}
+  tutoBlanc: {fileID: 0}
 --- !u!1 &1438296647
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,6 +880,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1739488571 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1283597268152722, guid: c40ca46b9ec751740b3d7e6e983b150a,
+    type: 2}
+  m_PrefabInternal: {fileID: 679951986}
 --- !u!1 &1826196954 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1667171149475214, guid: c40ca46b9ec751740b3d7e6e983b150a,

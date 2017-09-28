@@ -12,6 +12,9 @@ public class UIManagerIG : MonoBehaviour {
 	public GameObject uiIG;
 	public Text timer;
 	private bool apB;
+	private int plyrPause = -1;
+	private bool isPaused = false;
+	public GameObject pauseScreen;
 
 	public GameObject decompteur;
 	public float compteur;
@@ -98,7 +101,19 @@ public class UIManagerIG : MonoBehaviour {
 
     public void TogglePause(int plyr)
     {
-
+    	if(isPaused && plyrPause == plyr)
+    	{
+    		pauseScreen.SetActive(false);
+    		Time.timeScale = 1;
+    		plyrPause = -1;
+    	}
+    	else if (isPaused && plyrPause != plyr)
+    	{
+    		return;
+    	}
+    	pauseScreen.SetActive(true);
+    	Time.timeScale = 0;
+    	plyrPause = plyr;
     }
 
 }

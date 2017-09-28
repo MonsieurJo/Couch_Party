@@ -56,4 +56,4 @@ MonoBehaviour:
   - {fileID: 1601589484692256, guid: e620f2652fec854469b1ec754f9e6db8, type: 2}
   - {fileID: 1379090855759792, guid: ba0eb01bf0a43f34c94f220b652c6900, type: 2}
   - {fileID: 1606620165657234, guid: a2e5685ef386e9d4882fba9e8c4cee67, type: 2}
-  spawnInterval: 2
+  spawnInterval: 3
