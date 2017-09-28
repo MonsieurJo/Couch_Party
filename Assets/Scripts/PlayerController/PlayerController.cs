@@ -27,8 +27,7 @@ public class PlayerController : MonoBehaviour {
 	public float thrust;
 	public int playerNumber;
     public GameObject stocking;
-
-
+    
     private Countdown GMS;
 
     // Use this for initialization
@@ -131,6 +130,7 @@ public class PlayerController : MonoBehaviour {
 			isGrabbing = true;
 			grabCollider.enabled = false;
 			objectGrabbedRb = grabableObject.GetComponent<Rigidbody>();
+			grabableObject.GetComponent<CrateManager>().SetPlayerNb(myPlyrNmb);
 			objectGrabbedRb.isKinematic = true;
 			objectGrabbedRb.useGravity = false;
 			objectGrabbedRb.GetComponent<Collider>().enabled = false;
@@ -146,6 +146,9 @@ public class PlayerController : MonoBehaviour {
 			objectGrabbedRb.useGravity = true;
 			objectGrabbedRb.GetComponent<Collider>().enabled = true;
 			objectGrabbedRb = null;
+			Debug.Log("Lache");
+        	Debug.Log("Lachey");
+        	// grabableObject.GetComponent<CrateManager>().SetPlayerNb(0);
 			grabableObject = null;
 			isGrabbing = false;
 			grabCollider.enabled = true;
@@ -159,23 +162,23 @@ public class PlayerController : MonoBehaviour {
         	grabableObject = other.gameObject;
         }
 
-        if (other.CompareTag("Container"))
-        {
-           // if (Input.GetButtonDown("J" + myPlyrNmb.ToString() + "X"))
+        // if (other.CompareTag("Container"))
+        // {
+        //    // if (Input.GetButtonDown("J" + myPlyrNmb.ToString() + "X"))
            
-          // {
-                Destroy(objectGrabbed);
-                grabableObject.transform.SetParent(null);
-                objectGrabbed = null;
-                objectGrabbedRb.isKinematic = false;
-                objectGrabbedRb.useGravity = true;
-                objectGrabbedRb.GetComponent<Collider>().enabled = true;
-                objectGrabbedRb = null;
-                grabableObject = null;
-                isGrabbing = false;
-                grabCollider.enabled = true;
-             // }
-        }
+        //   // {
+        //         Destroy(objectGrabbed);
+        //         grabableObject.transform.SetParent(null);
+        //         objectGrabbed = null;
+        //         objectGrabbedRb.isKinematic = false;
+        //         objectGrabbedRb.useGravity = true;
+        //         objectGrabbedRb.GetComponent<Collider>().enabled = true;
+        //         objectGrabbedRb = null;
+        //         grabableObject = null;
+        //         isGrabbing = false;
+        //         grabCollider.enabled = true;
+        //      // }
+        // }
     }
 
     void OnTriggerExit (Collider other)
@@ -185,6 +188,4 @@ public class PlayerController : MonoBehaviour {
         	grabableObject = null;
         }
     }
-
-
 }
