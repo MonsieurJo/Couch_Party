@@ -31,6 +31,10 @@ public class MenuLobby : MonoBehaviour {
 	public GameObject j4ImageNoir;
 	public GameObject j4ImageBlanc;
 	//private bool activeLby = false;
+
+	//void Awake(){
+		//Play.Select();
+	//}
 	
 
 	void Start () {
@@ -50,14 +54,16 @@ public class MenuLobby : MonoBehaviour {
         if (!startMenu.activeSelf);
 		    startMenu.SetActive(true);
 		    lobby.SetActive(false);
+		    Play.Select();
 	}
 
     void TogglePlayerStart ()
     {
     	if (j1StartUI.activeSelf && nbJoueur > 1)
     	{
-    		canvasGeneral.SetActive(false);
+    		// canvasGeneral.SetActive(false);
     		SceneManager.LoadScene("SceneAmine");
+    		Destroy(gameObject);
     	}
     }
 
@@ -192,7 +198,7 @@ public class MenuLobby : MonoBehaviour {
 
     void Controllers() {
 
-    	float vAxis = Input.GetAxis("J1Vertical");
+    	// float vAxis = Input.GetAxis("J1Vertical");
 
 		//if (activeLby == true)
 		//{        
