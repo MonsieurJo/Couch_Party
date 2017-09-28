@@ -8,3 +8,11 @@ Lobby en cours (bientôt fini)
 Jeter objet commencé
 Tutoriel commencé
 
+-----------------------------------------------------------------
+
+Menu OK avec manette
+Lobby OK
+Les scripts du menu et du lobby ont été fusionnés
+Système de déplacement OK 
+Grab à peaufiner
+pause en cours
