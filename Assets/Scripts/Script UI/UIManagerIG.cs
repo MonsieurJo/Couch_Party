@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -48,7 +48,7 @@ public class UIManagerIG : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		if (apB == true && Input.GetKeyDown("b"))
+		if (apB == true && Input.GetButtonDown("J1B"))
 		{
 			SceneManager.LoadScene("ScenePierre");
 		}

@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour {
 	private GameObject objectGrabbed;
 	public float thrust;
 	public int playerNumber;
+    public GameObject stocking;
 
 
     // Use this for initialization
@@ -111,6 +112,7 @@ public class PlayerController : MonoBehaviour {
         {
         	grabableObject.transform.position = playerGrabPosition.transform.position;
 			grabableObject.transform.SetParent(playerGrabPosition.transform);
+            objectGrabbed = grabableObject;
 			isGrabbing = true;
 			grabCollider.enabled = false;
 			objectGrabbedRb = grabableObject.GetComponent<Rigidbody>();
@@ -124,6 +126,7 @@ public class PlayerController : MonoBehaviour {
         else if(aButtonUp && isGrabbing)
         {	
 			grabableObject.transform.SetParent(null);
+            objectGrabbed = null;
 			objectGrabbedRb.isKinematic = false;
 			objectGrabbedRb.useGravity = true;
 			objectGrabbedRb.GetComponent<Collider>().enabled = true;
@@ -139,6 +142,24 @@ public class PlayerController : MonoBehaviour {
 		if (other.CompareTag("Item"))
         {
         	grabableObject = other.gameObject;
+        }
+
+        if (other.CompareTag("Container"))
+        {
+           // if (Input.GetButtonDown("J" + myPlyrNmb.ToString() + "X"))
+           
+          // {
+                Destroy(objectGrabbed);
+                grabableObject.transform.SetParent(null);
+                objectGrabbed = null;
+                objectGrabbedRb.isKinematic = false;
+                objectGrabbedRb.useGravity = true;
+                objectGrabbedRb.GetComponent<Collider>().enabled = true;
+                objectGrabbedRb = null;
+                grabableObject = null;
+                isGrabbing = false;
+                grabCollider.enabled = true;
+             // }
         }
     }
 
