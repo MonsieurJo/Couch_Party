@@ -156,8 +156,6 @@ public class PlayerController : MonoBehaviour {
 			objectGrabbedRb.useGravity = true;
 			objectGrabbedRb.GetComponent<Collider>().enabled = true;
 			objectGrabbedRb = null;
-			Debug.Log("Lache");
-        	Debug.Log("Lachey");
         	// grabableObject.GetComponent<CrateManager>().SetPlayerNb(0);
 			grabableObject = null;
 			isGrabbing = false;

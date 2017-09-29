@@ -32,9 +32,23 @@ public class MenuLobby : MonoBehaviour {
 	public GameObject j4ImageBlanc;
 	//private bool activeLby = false;
 
-	//void Awake(){
-		//Play.Select();
-	//}
+	private static MenuLobby instance;
+    public static MenuLobby Instance()
+    {
+        return instance;
+    }
+
+    void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
 	
 
 	void Start () {
@@ -228,5 +242,10 @@ public class MenuLobby : MonoBehaviour {
 		if(Input.GetButtonDown("J4B")){
 			TogglePlayerFourUI2();
 		}
+    }
+
+    public int GetPlayersNumber ()
+    {
+    	return nbJoueur;
     }
 }

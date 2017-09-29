@@ -31,6 +31,11 @@ public class UIManagerIG : MonoBehaviour {
 
 	private Countdown GMS;
 
+	private int nbJoueurs = 2;
+	public List<int> plyrScores = new List<int>();
+	public List<int> tmpPlyrScores = new List<int>();
+	public List<Text> scoresText = new List<Text>();
+
     private static UIManagerIG instance;
     public static UIManagerIG Instance()
     {
@@ -70,7 +75,7 @@ public class UIManagerIG : MonoBehaviour {
 
 	void TimerIG () {
 
-	if(GMS.counterDownDone == true)
+	if(GMS.counterDownDone)
 	{
 
 		if(timerMinutes < 0)
@@ -96,10 +101,8 @@ public class UIManagerIG : MonoBehaviour {
 
 		if(timerMinutes == 0 && timerSecondes == 0)
 		{
-			classement.SetActive(true);
-			uiIG.SetActive(false);
-			Time.timeScale = 0;
-			apB = true;
+			TriggerClassement();
+			GMS.counterDownDone = false;
 		}
 	}
 
@@ -161,6 +164,52 @@ public class UIManagerIG : MonoBehaviour {
     		return currentScoreJ4;
     	} else{
     		return 0;
+    	}
+    }
+
+    public void TriggerClassement ()
+    {
+    	nbJoueurs = MenuLobby.Instance().GetPlayersNumber();
+    	plyrScores.Add(currentScoreJ1);
+    	plyrScores.Add(currentScoreJ2);
+    	plyrScores.Add(currentScoreJ3);
+    	plyrScores.Add(currentScoreJ4);
+
+    	tmpPlyrScores.Add(currentScoreJ1);
+    	tmpPlyrScores.Add(currentScoreJ2);
+    	tmpPlyrScores.Add(currentScoreJ3);
+    	tmpPlyrScores.Add(currentScoreJ4);
+
+    	plyrScores.Sort();
+    	plyrScores.Reverse();
+
+    	FillPlayers();
+
+    	for (var i = 1; i <= nbJoueurs; i++)
+    	{
+    		FillScoreText(scoresText[i-1],plyrScores[i-1]);
+    	}
+       	classement.SetActive(true);
+		uiIG.SetActive(false);
+		Time.timeScale = 0;
+		apB = true;
+    }
+
+    public void FillScoreText (Text ttf, int stf)
+    {
+    	ttf.text += " : " + stf.ToString();
+    }
+
+    public void FillPlayers ()
+    {
+    	for (var i = 1; i <= nbJoueurs; i++){
+    		for (var j = 1; j <= nbJoueurs; j++)
+    		{
+    			if (plyrScores[i-1] == tmpPlyrScores[j-1])
+    			{
+    				scoresText[i-1].text = "PLAYER " + j.ToString();
+    			}
+    		}
     	}
     }
 }

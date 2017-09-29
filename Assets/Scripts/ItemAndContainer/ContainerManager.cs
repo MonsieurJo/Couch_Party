@@ -26,7 +26,6 @@ public class ContainerManager : MonoBehaviour {
 			caisse = other.GetComponent<CrateManager>().GetCrateNb();
 			// Debug.Log(caisse);
 			playerNb = other.GetComponent<CrateManager>().GetPlayerNb();
-			Debug.Log(playerNb);
 			if (playerNb != 0){
 				if (caisse == containerNumber){
 					uiManager.GetComponent<UIManagerIG>().AddScore(playerNb, 50);
@@ -39,7 +38,6 @@ public class ContainerManager : MonoBehaviour {
 	}
 
 	void DestroyObject(){
-		Debug.Log("BRAAH");
 		Destroy(caisseInContainer);
 	}
 }

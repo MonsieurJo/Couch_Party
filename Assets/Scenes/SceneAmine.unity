@@ -1003,6 +1003,13 @@ MonoBehaviour:
   currentScoreJ4: 0
   decompteur: {fileID: 0}
   compteur: 0
+  plyrScores: 
+  tmpPlyrScores: 
+  scoresText:
+  - {fileID: 1726724509}
+  - {fileID: 1726724508}
+  - {fileID: 1726724507}
+  - {fileID: 1726724506}
 --- !u!4 &234894950
 Transform:
   m_ObjectHideFlags: 0
@@ -5993,23 +6000,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1252876705890340, guid: 44288072b0d9c004fb4d80192b349e0f,
     type: 2}
   m_PrefabInternal: {fileID: 1726724505}
---- !u!114 &1841685630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1841685629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84725d523542fe0459c00fb5a3c62352, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstPlayer: {fileID: 1726724509}
-  secondPlayer: {fileID: 1726724508}
-  thirdPlayer: {fileID: 1726724507}
-  fourthPlayer: {fileID: 1726724506}
-  uiManagerIG: {fileID: 234894948}
-  score: 
 --- !u!224 &1841685633 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224967903848945324, guid: 44288072b0d9c004fb4d80192b349e0f,
