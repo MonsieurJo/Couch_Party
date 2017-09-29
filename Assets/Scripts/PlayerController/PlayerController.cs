@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour {
     
     private Countdown GMS;
 
+
     // Use this for initialization
     void Start () {
     	if (gameObject.CompareTag("J1") && !MenuLobby.player1InGame){
@@ -57,7 +58,10 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
+			
+
 		hAxis = Input.GetAxis("J"+myPlyrNmb.ToString()+"Horizontal");
 		vAxis = Input.GetAxis("J"+myPlyrNmb.ToString()+"Vertical");
 
@@ -66,11 +70,17 @@ public class PlayerController : MonoBehaviour {
 		bButton = Input.GetButtonDown("J"+myPlyrNmb.ToString()+"B");
 		startButton = Input.GetButtonDown("J"+myPlyrNmb.ToString()+"Start");
 
+
 		leftTrigger = Input.GetAxis("J"+myPlyrNmb.ToString()+"LeftTrigger");
 		rightTrigger = Input.GetAxis("J"+myPlyrNmb.ToString()+"RightTrigger");
 
 		MoveManager();
 		GrabManager();
+
+		if (startButton)
+		{
+			UIManagerIG.Instance().TogglePause(myPlyrNmb);
+		}
 	}
 
 	void MoveManager(){

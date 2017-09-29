@@ -114,17 +114,21 @@ public class UIManagerIG : MonoBehaviour {
     {
     	if(isPaused && plyrPause == plyr)
     	{
+    		isPaused = false;
     		pauseScreen.SetActive(false);
-    		Time.timeScale = 1;
     		plyrPause = -1;
+    		Time.timeScale = 1;
+    		return;
     	}
     	else if (isPaused && plyrPause != plyr)
     	{
     		return;
     	}
+    	isPaused = true;
+    	plyrPause = plyr;
     	pauseScreen.SetActive(true);
     	Time.timeScale = 0;
-    	plyrPause = plyr;
+    	
     }
 
     public void ScoreManager(){
