@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -5642,6 +5642,30 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 44288072b0d9c004fb4d80192b349e0f, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1726724506 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114645191061427758, guid: 44288072b0d9c004fb4d80192b349e0f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1726724505}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!114 &1726724507 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114704447548534550, guid: 44288072b0d9c004fb4d80192b349e0f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1726724505}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!114 &1726724508 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114014759434408482, guid: 44288072b0d9c004fb4d80192b349e0f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1726724505}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!114 &1726724509 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114150688066715502, guid: 44288072b0d9c004fb4d80192b349e0f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1726724505}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &1730552790 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: e77ef81515136b74681f8e270518066e, type: 3}
@@ -5969,6 +5993,23 @@ GameObject:
   m_PrefabParentObject: {fileID: 1252876705890340, guid: 44288072b0d9c004fb4d80192b349e0f,
     type: 2}
   m_PrefabInternal: {fileID: 1726724505}
+--- !u!114 &1841685630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1841685629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84725d523542fe0459c00fb5a3c62352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstPlayer: {fileID: 1726724509}
+  secondPlayer: {fileID: 1726724508}
+  thirdPlayer: {fileID: 1726724507}
+  fourthPlayer: {fileID: 1726724506}
+  uiManagerIG: {fileID: 234894948}
+  score: 
 --- !u!224 &1841685633 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224967903848945324, guid: 44288072b0d9c004fb4d80192b349e0f,
