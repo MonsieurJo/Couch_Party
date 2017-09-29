@@ -52,6 +52,7 @@ public class MenuLobby : MonoBehaviour {
 	
 
 	void Start () {
+		Time.timeScale = 1;
 		startMenu.SetActive(true);
 		lobby.SetActive(false);
 		Play.Select();

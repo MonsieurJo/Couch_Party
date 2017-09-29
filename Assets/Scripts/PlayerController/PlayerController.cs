@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour {
 
 	void MoveManager(){
 		
-		if(GMS.counterDownDone == true)
+		if(GMS.counterDownDone)
 		{
 			Vector3 movement = new Vector3(hAxis, 0.0f, vAxis);
 		
