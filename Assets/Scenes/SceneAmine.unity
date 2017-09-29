@@ -987,7 +987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 435ea1903174067419abe4baa59a4af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerMinutes: 1
+  timerMinutes: 0
   timerSecondes: 30
   classement: {fileID: 1841685629}
   uiIG: {fileID: 1216825189}
