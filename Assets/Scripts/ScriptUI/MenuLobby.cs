@@ -30,6 +30,7 @@ public class MenuLobby : MonoBehaviour {
 	public GameObject j4PushBUI;
 	public GameObject j4ImageNoir;
 	public GameObject j4ImageBlanc;
+	public GameObject loadScreen;
 	//private bool activeLby = false;
 
 	private static MenuLobby instance;
@@ -76,8 +77,10 @@ public class MenuLobby : MonoBehaviour {
     {
     	if (j1StartUI.activeSelf && nbJoueur > 1)
     	{
-    		// canvasGeneral.SetActive(false);
-    		SceneManager.LoadScene("SceneAmine");
+    		canvasGeneral.SetActive(false);
+			loadScreen.SetActive(true);
+    		//SceneManager.LoadScene("SceneAmine");
+			StartCoroutine(LoadYourAsyncScreen());
     		Destroy(gameObject);
     	}
     }
@@ -249,4 +252,14 @@ public class MenuLobby : MonoBehaviour {
     {
     	return nbJoueur;
     }
+
+	IEnumerator LoadYourAsyncScreen ()
+	{
+		AsyncOperation asyncLoad = SceneManager.LoadSceneAsync ("SceneAmine");
+
+		while (!asyncLoad.isDone) 
+		{
+			yield return null;
+		}
+	}
 }
