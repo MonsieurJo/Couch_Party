@@ -21,6 +21,9 @@ public class UIManagerIG : MonoBehaviour {
 	public Text scoreJ3;
 	public Text scoreJ4;
 
+    public Image[] idf;
+    public Color[] cdf;
+
 	public int currentScoreJ1 = 0;
 	public int currentScoreJ2 = 0;
 	public int currentScoreJ3 = 0;
@@ -208,6 +211,7 @@ public class UIManagerIG : MonoBehaviour {
     			if (plyrScores[i-1] == tmpPlyrScores[j-1])
     			{
     				scoresText[i-1].text = "PLAYER " + j.ToString();
+                    idf[i - 1].color = cdf[j - 1];
     			}
     		}
     	}
