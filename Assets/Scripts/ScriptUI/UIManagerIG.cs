@@ -39,8 +39,12 @@ public class UIManagerIG : MonoBehaviour {
 	public List<int> tmpPlyrScores = new List<int>();
 	public List<Text> scoresText = new List<Text>();
 
+    public Button backPauseButton;
+
     private static UIManagerIG instance;
     public static UIManagerIG Instance()
+
+
     {
         return instance;
     }
@@ -130,11 +134,18 @@ public class UIManagerIG : MonoBehaviour {
     	{
     		return;
     	}
+
+        //backPauseButton.Select = true;
     	isPaused = true;
     	plyrPause = plyr;
     	pauseScreen.SetActive(true);
     	Time.timeScale = 0;
     	
+    }
+
+    public void BackToMenuOnClick()
+    {
+        SceneManager.LoadScene("ScenePierre");
     }
 
     public void ScoreManager(){
