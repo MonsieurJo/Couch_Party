@@ -77,7 +77,7 @@ public class MenuLobby : MonoBehaviour {
     {
     	if (j1StartUI.activeSelf && nbJoueur > 1)
     	{
-    		canvasGeneral.SetActive(false);
+    		//canvasGeneral.SetActive(false);
 			loadScreen.SetActive(true);
     		//SceneManager.LoadScene("SceneAmine");
 			StartCoroutine(LoadYourAsyncScreen());
@@ -259,7 +259,7 @@ public class MenuLobby : MonoBehaviour {
 
 		while (!asyncLoad.isDone) 
 		{
-			yield return null;
+			yield return new WaitForSecondsRealtime (5);
 		}
 	}
 }
